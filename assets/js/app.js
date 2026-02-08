@@ -105,14 +105,7 @@ function initTheme($) {
   $(".icon-search, .search-close").on("click", function () {
     $(".search-wrapper").toggleClass("search-appear");
   });
-
-  // quickview slider initiation
-  $("#quickview-modal").on("shown.bs.modal", function (e) {
-    $(".qv-large-slider").slick("setPosition");
-    $(".qv-thumb-slider").slick("setPosition");
-  });
-
-  // common slider
+// common slider
   $(".common-slider").each(function () {
     var $this = $(this);
     var verticalSlide = $(this).attr("data-vertical-slider");
@@ -251,15 +244,7 @@ function initTheme($) {
     $("html, body").animate({ scrollTop: 0 }, 300);
   });
 
-  /* --------------------------------------------------------
-    newsletter popup
-  -------------------------------------------------------- */
-  $(window).ready(function () {
-    setTimeout(function () {
-      $("#modal-subscribe").modal("show");
-    }, 3000);
-  });
-}
+  }
 
 
 /* ===== Theme custom elements (from original main.js) ===== */
