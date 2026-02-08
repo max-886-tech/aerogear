@@ -3,8 +3,25 @@
 <head>
 <title>FAQ | Bisum</title>
 <!-- meta tags -->
-<meta charset="utf-8"/><base href="/"/>
-<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta charset="utf-8"/>
+<script>
+(function(){
+  var base = '/';
+  var host = location.hostname || '';
+  if (location.protocol === 'file:') {
+    base = './';
+  } else if (host.endsWith('github.io')) {
+    var parts = location.pathname.split('/').filter(Boolean);
+    if (parts.length && parts[0] && !parts[0].includes('.')) {
+      base = '/' + parts[0] + '/';
+    }
+  }
+  var b = document.createElement('base');
+  b.href = base;
+  document.head.insertBefore(b, document.head.firstChild);
+  window.__SITE_BASE = base;
+})();
+</script><meta content="IE=edge" http-equiv="X-UA-Compatible"/>
 <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport"/>
 <meta content="meta description" name="description"/>
 <link href="assets/img/favicon.png" rel="shortcut icon" type="image/x-icon"/>
