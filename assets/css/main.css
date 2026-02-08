@@ -179,35 +179,48 @@ iframe {
     padding-left: var(--bs-gutter-x, 0.75rem);
     padding-right: var(--bs-gutter-x, 0.75rem); } }
 
+/* Core brand backgrounds */
 .bg-1 {
-  background-color: #00234d; }
+  background-color: #0B1F3B;   /* Navy – primary sections */
+}
 
 .bg-2 {
-  background-color: #000; }
+  background-color: #0B0B0B;   /* Near-black – footer / strong contrast */
+}
 
 .bg-3 {
-  background-color: #f76b6a; }
+  background-color: #F76B6A;   /* Coral – CTA / highlights only */
+}
 
 .bg-4 {
-  background-color: #071c1f; }
+  background-color: #08172C;   /* Dark navy – overlays / hero depth */
+}
 
 .bg-5 {
-  background-color: #fbf3f0; }
+  background-color: #F7F7F8;   /* Light neutral – section background */
+}
 
 .bg-6 {
-  background-color: #0a58ca; }
+  background-color: #0B1F3B;   /* Same as primary (kept consistent) */
 
+/* Soft accent backgrounds */
 .bg-pink {
-  background-color: #fff3f3; }
+  background-color: #FFF3F3;   /* Soft coral tint – badges / offers */
+}
 
+/* Trust / info sections (very subtle tints) */
 .bg-trust-1 {
-  background-color: #fcedda; }
+  background-color: #F5F7FA;   /* Light gray-blue */
+}
 
 .bg-trust-2 {
-  background-color: #f2fbcb; }
+  background-color: #F0F4F8;   /* Cool neutral */
+}
 
 .bg-trust-3 {
-  background-color: #f7d8f9; }
+  background-color: #FAFAFA;   /* Almost white */
+}
+
 
 .btn-primary,
 .btn-primary:hover,
