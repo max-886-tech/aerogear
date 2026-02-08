@@ -509,7 +509,7 @@ customElements.define('mobile-submenu', MobileSubmenu);
     });
   }
 
-  async   function _escapeHtml(str) {
+  function _escapeHtml(str) {
     return String(str || '')
       .replace(/&/g, '&amp;')
       .replace(/</g, '&lt;')

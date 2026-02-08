@@ -80,6 +80,10 @@
       "hours": "Monday \u2013 Friday: 9:00 AM \u2013 8:00 PM (GMT+5:30)"
     }
   },
+  "faq": {
+  "title": "Frequently Asked Questions",
+  "subtitle": "Quick answers about shipping, products, customization & materials."
+},
   "faqGroups": [
   {
     "title": "Shipping & Delivery",
