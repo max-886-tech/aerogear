@@ -79,5 +79,108 @@
       "emailMailto": "mailto:office.nektonindia@gmail.com",
       "hours": "Monday \u2013 Friday: 9:00 AM \u2013 8:00 PM (GMT+5:30)"
     }
+  },
+  "faqGroups": [
+  {
+    "title": "Shipping & Delivery",
+    "items": [
+      {
+        "q": "Do you ship internationally?",
+        "a": "Yes. We can arrange international shipping. For timelines and charges, please contact us before placing a bulk order."
+      }
+    ]
+  },
+  {
+    "title": "Product FAQs",
+    "items": [
+      {
+        "q": "What materials are used in your nylon bags?",
+        "a": "Our nylon bags use durable, high-quality nylon fabric chosen for daily wear, strength, and long-lasting performance."
+      },
+      {
+        "q": "Can I customize the design of backpacks?",
+        "a": "Yes. We support customization (logo, colors, and design changes) for bulk orders. Share your requirements and we’ll guide you."
+      },
+      {
+        "q": "Do your school/college bags have reinforced stitching?",
+        "a": "Many models are built with reinforced stitching at stress points to improve durability for regular use."
+      },
+      {
+        "q": "What sizes are available for college bags?",
+        "a": "We offer multiple sizes depending on the model. If you need a specific capacity or laptop size support, contact us for recommendations."
+      },
+      {
+        "q": "Are delivery bags suitable for fragile items?",
+        "a": "Yes. Delivery bags are designed for secure transport and can help protect items during handling; packing method also matters."
+      },
+      {
+        "q": "Do gym bags include shoe / wet compartments?",
+        "a": "Many gym models include separate compartments for shoes or wet items to keep them apart from clothes and electronics."
+      },
+      {
+        "q": "Are trolley bags suitable for air travel?",
+        "a": "Most trolley models are designed to meet typical travel use. Always check airline cabin/checked baggage rules for your route."
+      },
+      {
+        "q": "Do office bags have laptop compartments?",
+        "a": "Yes. Many office and laptop bags include a dedicated padded compartment to keep laptops/tablets protected."
+      },
+      {
+        "q": "Are trekking bags waterproof?",
+        "a": "Some models use water-resistant materials; many also support rain covers. For heavy rain use, ask us for the best option."
+      },
+      {
+        "q": "What sizes are available for duffel bags?",
+        "a": "Duffels come in different sizes for gym, short trips, and travel. Share your need and we’ll suggest the right capacity."
+      }
+    ]
+  },
+  {
+    "title": "Leather & Premium Range",
+    "items": [
+      {
+        "q": "What types of leather do you use?",
+        "a": "Depending on the product, we offer options such as genuine leather and premium alternatives. Availability can vary by model."
+      },
+      {
+        "q": "Can I personalize a leather laptop bag with initials?",
+        "a": "Yes. Personalization is possible on select models for bulk/custom orders. Share the placement and style you want."
+      },
+      {
+        "q": "What’s included in your gift sets?",
+        "a": "Gift sets can include combinations like bags, wallets, and accessories depending on the set. Exact contents vary by listing/order."
+      },
+      {
+        "q": "What makes vegan leather ‘luxury’?",
+        "a": "Luxury vegan leather focuses on premium look and finish while staying cruelty-free, designed to feel and look high-end."
+      }
+    ]
+  },
+  {
+    "title": "Wooden Products (If Applicable)",
+    "items": [
+      {
+        "q": "Are wooden dry-fruit boxes sealed to keep contents fresh?",
+        "a": "Many wooden boxes are made to close securely; sealing/lining can vary by design. Confirm the exact model for airtight needs."
+      },
+      {
+        "q": "Can I request custom engravings on wooden gift boxes?",
+        "a": "Yes. Custom engraving is available for bulk/custom orders—share your logo/text/design for approval."
+      },
+      {
+        "q": "What types of wood are used in jewellery boxes?",
+        "a": "Wood type depends on the model and finish. We can share the material details once you shortlist a design."
+      },
+      {
+        "q": "Are wooden serving trays treated for water resistance?",
+        "a": "Many trays are finished/coated to help resist moisture and stains, but they should be dried after use."
+      },
+      {
+        "q": "Can I order personalized wooden products with specific designs?",
+        "a": "Yes. We accept custom designs for bulk orders—share dimensions, artwork and finish preferences."
+      }
+    ]
   }
+]
+
 }

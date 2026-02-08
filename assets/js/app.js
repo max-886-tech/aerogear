@@ -508,6 +508,81 @@ customElements.define('mobile-submenu', MobileSubmenu);
       if (val) el.setAttribute('src', String(val));
     });
   }
+
+  async   function _escapeHtml(str) {
+    return String(str || '')
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;')
+      .replace(/'/g, '&#039;');
+  }
+
+  function _renderFaq(cfg) {
+    const mount = document.getElementById('faq-dynamic');
+    if (!mount) return;
+
+    const groups = Array.isArray(cfg.faqGroups) ? cfg.faqGroups : [];
+    if (!groups.length) {
+      mount.innerHTML = '<p class="text-center">FAQ will be added soon.</p>';
+      return;
+    }
+
+    let out = '';
+
+    groups.forEach((group, gi) => {
+      const title = _escapeHtml(group.title || '');
+      const items = Array.isArray(group.items) ? group.items : [];
+
+      // split into 2 columns (like your template)
+      const left = [];
+      const right = [];
+      items.forEach((it, idx) => ((idx % 2 === 0) ? left : right).push({ it, idx }));
+
+      const renderItem = ({ it, idx }) => {
+        const q = _escapeHtml(it.q || '');
+        const a = _escapeHtml(it.a || '');
+        const id = `faq-${gi}-${idx}`;
+        return `
+          <div class="faq-item rounded">
+            <h2 class="faq-heading heading_18 collapsed d-flex align-items-center justify-content-between"
+                data-bs-toggle="collapse"
+                data-bs-target="#${id}"
+                aria-expanded="false"
+                aria-controls="${id}">
+              ${q}
+              <span class="faq-heading-icon">
+                <svg class="icon icon-down" fill="none" height="24" stroke="#F76B6A" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </span>
+            </h2>
+            <div class="accordion-collapse collapse" id="${id}">
+              <p class="faq-body text_14">${a}</p>
+            </div>
+          </div>
+        `;
+      };
+
+      out += `
+        <div class="mt-40">
+          ${title ? `<h3 class="heading_24 mb-20">${title}</h3>` : ''}
+          <div class="row">
+            <div class="col-lg-6 col-md-6 col-12">
+              ${left.map(renderItem).join('')}
+            </div>
+            <div class="col-lg-6 col-md-6 col-12">
+              ${right.map(renderItem).join('')}
+            </div>
+          </div>
+        </div>
+      `;
+    });
+
+    mount.innerHTML = out;
+  }
+
+  
   async function _injectLayout() {
     const defaultCfg = {
       siteName: 'AEROGEAR',
@@ -596,6 +671,7 @@ customElements.define('mobile-submenu', MobileSubmenu);
 
     _setCurrentYear(document);
     _applyDataBindings(cfg, document);
+    _renderFaq(cfg);
   }
 
   document.addEventListener('DOMContentLoaded', async function () {
