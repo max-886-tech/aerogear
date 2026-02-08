@@ -1,4 +1,4 @@
-# Bisum (Structured) – GitHub Pages Ready
+# AEROGEAR (Structured) – GitHub Pages Ready
 
 This project was re-structured to make **header + footer + shared overlays (mobile menu/cart/modals)** reusable and easy to change.
 

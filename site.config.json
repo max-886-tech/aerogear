@@ -1,9 +1,9 @@
 {
-  "siteName": "Bisum",
+  "siteName": "AEROGEAR",
   "homeUrl": "index.html",
   "logo": {
     "src": "assets/img/logo.png",
-    "alt": "Bisum"
+    "alt": "AEROGEAR"
   },
   "nav": [
     {
@@ -56,6 +56,28 @@
       "section-heading-font-size": "48px",
       "section-subheading-color": "#000",
       "section-subheading-font-size": "18px"
+    }
+  },
+  "announcement": {
+    "call": {
+      "text": "Call: +91 790 009 8455",
+      "href": "tel:+917900098455"
+    },
+    "message": "New year sale - 30% off",
+    "link": {
+      "text": "Shop on Amazon",
+      "href": "https://www.amazon.in/stores/page/941C94E9-79FD-4688-A5D7-9779022CC8F6"
+    }
+  },
+  "company": {
+    "hq": {
+      "title": "Corporate Headquarters",
+      "address": "Ground Floor, Plot No. 11/12, Godown No. GN-289A, Shakir Compound, Patra shed, Dharavi Main Road, Gosia Galli, Dharavi, Mahim East, Mumbai Suburban, Maharashtra, 400017",
+      "phone": "+91 790 009 8455",
+      "phoneTel": "tel:+917900098455",
+      "email": "office.nektonindia@gmail.com",
+      "emailMailto": "mailto:office.nektonindia@gmail.com",
+      "hours": "Monday \u2013 Friday: 9:00 AM \u2013 8:00 PM (GMT+5:30)"
     }
   }
 }

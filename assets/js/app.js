@@ -477,11 +477,57 @@ customElements.define('mobile-submenu', MobileSubmenu);
     });
   }
 
+
+
+  function _getByPath(obj, path, fallback) {
+    try {
+      if (!path) return fallback;
+      const parts = String(path).split('.');
+      let cur = obj;
+      for (const k of parts) {
+        if (cur && Object.prototype.hasOwnProperty.call(cur, k)) {
+          cur = cur[k];
+        } else {
+          return fallback;
+        }
+      }
+      return (cur === undefined || cur === null) ? fallback : cur;
+    } catch (e) {
+      return fallback;
+    }
+  }
+
+  function _applyDataBindings(cfg, root) {
+    const doc = root || document;
+
+    // text bindings
+    doc.querySelectorAll('[data-dyn]').forEach((el) => {
+      const key = el.getAttribute('data-dyn');
+      const val = _getByPath(cfg, key, '');
+      if (typeof val === 'string' || typeof val === 'number') {
+        el.textContent = String(val);
+      }
+    });
+
+    // href bindings
+    doc.querySelectorAll('[data-dyn-href]').forEach((el) => {
+      const key = el.getAttribute('data-dyn-href');
+      const val = _getByPath(cfg, key, '');
+      if (val) el.setAttribute('href', String(val));
+    });
+
+    // src bindings (optional)
+    doc.querySelectorAll('[data-dyn-src]').forEach((el) => {
+      const key = el.getAttribute('data-dyn-src');
+      const val = _getByPath(cfg, key, '');
+      if (val) el.setAttribute('src', String(val));
+    });
+  }
   async function _injectLayout() {
     const defaultCfg = {
-      siteName: 'Bisum',
+      siteName: 'AEROGEAR',
       homeUrl: 'index.html',
-      logo: { src: 'assets/img/logo.png', alt: 'Bisum' },
+      logo: { src: 'assets/img/logo.png', alt: 'AEROGEAR' },
       nav: [
         { label: 'Home', href: 'index.html' },
         { label: 'Shop', href: 'shop.html' },
@@ -490,6 +536,22 @@ customElements.define('mobile-submenu', MobileSubmenu);
         { label: 'Contact', href: 'contact.html' },
       ],
       theme: { vars: {} },
+      announcement: {
+        call: { text: 'Call: +91 790 009 8455', href: 'tel:+917900098455' },
+        message: 'New year sale - 30% off',
+        link: { text: 'Shop on Amazon', href: 'https://www.amazon.in/stores/page/941C94E9-79FD-4688-A5D7-9779022CC8F6' },
+      },
+      company: {
+        hq: {
+          title: 'Corporate Headquarters',
+          address: 'Ground Floor, Plot No. 11/12, Godown No. GN-289A, Shakir Compound, Patra shed, Dharavi Main Road, Gosia Galli, Dharavi, Mahim East, Mumbai Suburban, Maharashtra, 400017',
+          phone: '+91 790 009 8455',
+          phoneTel: 'tel:+917900098455',
+          email: 'office.nektonindia@gmail.com',
+          emailMailto: 'mailto:office.nektonindia@gmail.com',
+          hours: 'Monday – Friday: 9:00 AM – 8:00 PM (GMT+5:30)',
+        },
+      },
     };
 
     let cfg = defaultCfg;
@@ -499,7 +561,12 @@ customElements.define('mobile-submenu', MobileSubmenu);
       cfg.logo = Object.assign({}, defaultCfg.logo, (cfg.logo || {}));
       cfg.theme = Object.assign({}, defaultCfg.theme, (cfg.theme || {}));
       cfg.theme.vars = Object.assign({}, defaultCfg.theme.vars, (cfg.theme.vars || {}));
-      cfg.nav = Array.isArray(cfg.nav) ? cfg.nav : defaultCfg.nav;
+            cfg.nav = Array.isArray(cfg.nav) ? cfg.nav : defaultCfg.nav;
+      cfg.announcement = Object.assign({}, defaultCfg.announcement, (cfg.announcement || {}));
+      cfg.announcement.call = Object.assign({}, defaultCfg.announcement.call, ((cfg.announcement || {}).call || {}));
+      cfg.announcement.link = Object.assign({}, defaultCfg.announcement.link, ((cfg.announcement || {}).link || {}));
+      cfg.company = Object.assign({}, defaultCfg.company, (cfg.company || {}));
+      cfg.company.hq = Object.assign({}, defaultCfg.company.hq, ((cfg.company || {}).hq || {}));
     } catch (e) {
       console.warn('[layout] Using default config (site.config.json not found or invalid).', e);
     }
@@ -516,6 +583,11 @@ customElements.define('mobile-submenu', MobileSubmenu);
       LOGO_ALT: cfg.logo.alt,
       NAV_ITEMS: navHtml,
       MOBILE_NAV_ITEMS: navHtml, // same list for drawer menu
+      ANNOUNCEMENT_CALL_HREF: cfg.announcement.call.href,
+      ANNOUNCEMENT_CALL_TEXT: cfg.announcement.call.text,
+      ANNOUNCEMENT_MESSAGE: cfg.announcement.message,
+      ANNOUNCEMENT_LINK_HREF: cfg.announcement.link.href,
+      ANNOUNCEMENT_LINK_TEXT: cfg.announcement.link.text,
     };
 
     const [headerTpl, footerTpl, overlaysTpl] = await Promise.all([
@@ -538,6 +610,7 @@ customElements.define('mobile-submenu', MobileSubmenu);
     if (overlaysMount) overlaysMount.innerHTML = overlaysOut;
 
     _setCurrentYear(document);
+    _applyDataBindings(cfg, document);
   }
 
   document.addEventListener('DOMContentLoaded', async function () {
