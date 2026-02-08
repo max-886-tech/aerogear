@@ -5,51 +5,56 @@
   You can override them in site.config.json (theme.vars) without touching CSS.
 */
 :root {
-        --primary-color: #f76b6a;
-        --secondary-color: #f0686e;
+  /* Brand Colors */
+  --primary-color: #0B1F3B;     /* Navy (main accent) */
+  --secondary-color: #F76B6A;   /* Coral (sales/highlights) */
 
-        --btn-primary-border-radius: 0.25rem;
-        --btn-primary-color: #fff;
-        --btn-primary-background-color: #f76b6a;
-        --btn-primary-border-color: #f76b6a;
-        --btn-primary-hover-color: #fff;
-        --btn-primary-background-hover-color: #f0686e;
-        --btn-primary-border-hover-color: #f0686e;
-        --btn-primary-font-weight: 500;
+  /* Buttons - Primary */
+  --btn-primary-border-radius: 0.25rem;
+  --btn-primary-color: #fff;
+  --btn-primary-background-color: #0B1F3B;
+  --btn-primary-border-color: #0B1F3B;
+  --btn-primary-hover-color: #fff;
+  --btn-primary-background-hover-color: #08172C;
+  --btn-primary-border-hover-color: #08172C;
+  --btn-primary-font-weight: 500;
 
-        --btn-secondary-border-radius: 0.25rem;
-        --btn-secondary-color: #f76b6a;
-        --btn-secondary-background-color: transparent;
-        --btn-secondary-border-color: #f76b6a;
-        --btn-secondary-hover-color: #fff;
-        --btn-secondary-background-hover-color: #f0686e;
-        --btn-secondary-border-hover-color: #f0686e;
-        --btn-secondary-font-weight: 500;
+  /* Buttons - Secondary */
+  --btn-secondary-border-radius: 0.25rem;
+  --btn-secondary-color: #0B1F3B;
+  --btn-secondary-background-color: transparent;
+  --btn-secondary-border-color: #0B1F3B;
+  --btn-secondary-hover-color: #fff;
+  --btn-secondary-background-hover-color: #08172C;
+  --btn-secondary-border-hover-color: #08172C;
+  --btn-secondary-font-weight: 500;
 
-        --heading-color: #000;
-        --heading-font-family: "Poppins", sans-serif;
-        --heading-font-weight: 700;
+  /* Typography / Text Colors */
+  --heading-color: #0B0B0B;
+  --heading-font-family: "Poppins", sans-serif;
+  --heading-font-weight: 700;
 
-        --title-color: #000;
-        --title-font-family: "Poppins", sans-serif;
-        --title-font-weight: 400;
+  --title-color: #0B0B0B;
+  --title-font-family: "Poppins", sans-serif;
+  --title-font-weight: 400;
 
-        --body-color: #000;
-        --body-background-color: #fff;
-        --body-font-family: "Poppins", sans-serif;
-        --body-font-size: 14px;
-        --body-font-weight: 400;
+  --body-color: #111111;
+  --body-background-color: #FFFFFF;
+  --body-font-family: "Poppins", sans-serif;
+  --body-font-size: 14px;
+  --body-font-weight: 400;
 
-        --section-heading-color: #000;
-        --section-heading-font-family: "Poppins", sans-serif;
-        --section-heading-font-size: 48px;
-        --section-heading-font-weight: 600;
+  --section-heading-color: #0B0B0B;
+  --section-heading-font-family: "Poppins", sans-serif;
+  --section-heading-font-size: 48px;
+  --section-heading-font-weight: 600;
 
-        --section-subheading-color: #000;
-        --section-subheading-font-family: "Poppins", sans-serif;
-        --section-subheading-font-size: 18px;
-        --section-subheading-font-weight: 400;
-      }
+  --section-subheading-color: #333333;
+  --section-subheading-font-family: "Poppins", sans-serif;
+  --section-subheading-font-size: 18px;
+  --section-subheading-font-weight: 400;
+}
+
 
 /* ===== Vendor CSS ===== */
 /* 
@@ -174,35 +179,48 @@ iframe {
     padding-left: var(--bs-gutter-x, 0.75rem);
     padding-right: var(--bs-gutter-x, 0.75rem); } }
 
+/* Core brand backgrounds */
 .bg-1 {
-  background-color: #00234d; }
+  background-color: #0B1F3B;   /* Navy – primary sections */
+}
 
 .bg-2 {
-  background-color: #000; }
+  background-color: #0B0B0B;   /* Near-black – footer / strong contrast */
+}
 
 .bg-3 {
-  background-color: #f76b6a; }
+  background-color: #F76B6A;   /* Coral – CTA / highlights only */
+}
 
 .bg-4 {
-  background-color: #071c1f; }
+  background-color: #08172C;   /* Dark navy – overlays / hero depth */
+}
 
 .bg-5 {
-  background-color: #fbf3f0; }
+  background-color: #F7F7F8;   /* Light neutral – section background */
+}
 
 .bg-6 {
-  background-color: #0a58ca; }
+  background-color: #0B1F3B;   /* Same as primary (kept consistent) */
 
+/* Soft accent backgrounds */
 .bg-pink {
-  background-color: #fff3f3; }
+  background-color: #FFF3F3;   /* Soft coral tint – badges / offers */
+}
 
+/* Trust / info sections (very subtle tints) */
 .bg-trust-1 {
-  background-color: #fcedda; }
+  background-color: #F5F7FA;   /* Light gray-blue */
+}
 
 .bg-trust-2 {
-  background-color: #f2fbcb; }
+  background-color: #F0F4F8;   /* Cool neutral */
+}
 
 .bg-trust-3 {
-  background-color: #f7d8f9; }
+  background-color: #FAFAFA;   /* Almost white */
+}
+
 
 .btn-primary,
 .btn-primary:hover,
