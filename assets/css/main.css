@@ -5,11 +5,11 @@
   You can override them in site.config.json (theme.vars) without touching CSS.
 */
 :root {
-  /* Brand Colors */
+/* Brand Colors */
   --primary-color: #0B1F3B;     /* Navy (main accent) */
   --secondary-color: #F76B6A;   /* Coral (sales/highlights) */
 
-  /* Buttons - Primary */
+/* Buttons - Primary */
   --btn-primary-border-radius: 0.25rem;
   --btn-primary-color: #fff;
   --btn-primary-background-color: #0B1F3B;
@@ -19,7 +19,7 @@
   --btn-primary-border-hover-color: #08172C;
   --btn-primary-font-weight: 500;
 
-  /* Buttons - Secondary */
+/* Buttons - Secondary */
   --btn-secondary-border-radius: 0.25rem;
   --btn-secondary-color: #0B1F3B;
   --btn-secondary-background-color: transparent;
@@ -29,7 +29,7 @@
   --btn-secondary-border-hover-color: #08172C;
   --btn-secondary-font-weight: 500;
 
-  /* Typography / Text Colors */
+/* Typography / Text Colors */
   --heading-color: #0B0B0B;
   --heading-font-family: "Poppins", sans-serif;
   --heading-font-weight: 700;
@@ -55,7 +55,6 @@
   --section-subheading-font-weight: 400;
 }
 
-
 /* ===== Vendor CSS ===== */
 /* 
 ** vendor css list
@@ -72,7 +71,7 @@
 /*=============================================
 01. Bootstrap v5.3.7
 =============================================*/
-@charset "UTF-8";/*!
+/*!
  * Bootstrap  v5.3.7 (https://getbootstrap.com/)
  * Copyright 2011-2025 The Bootstrap Authors
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
