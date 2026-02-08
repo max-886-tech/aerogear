@@ -484,7 +484,7 @@ customElements.define('mobile-submenu', MobileSubmenu);
       logo: { src: 'assets/img/logo.png', alt: 'Bisum' },
       nav: [
         { label: 'Home', href: 'index.html' },
-        { label: 'Shop', href: 'Shop.html' },
+        { label: 'Shop', href: 'shop.html' },
         { label: 'About', href: 'about-us.html' },
         { label: 'FAQ', href: 'faq.html' },
         { label: 'Contact', href: 'contact.html' },

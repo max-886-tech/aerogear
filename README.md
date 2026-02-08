@@ -58,3 +58,14 @@ In GitHub → Settings → Pages → Custom domain:
 ## Base URL
 This site uses `<base href="/">` for reliable asset paths on a custom domain.
 - If you deploy under `username.github.io/REPO_NAME/` (without a custom domain), change it to: `<base href="/REPO_NAME/">` in all pages.
+
+
+## Pages included
+- index.html
+- shop.html
+- product-details.html
+- about-us.html
+- faq.html
+- contact.html
+- login.html
+- 404.html
