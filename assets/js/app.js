@@ -509,6 +509,48 @@ customElements.define('mobile-submenu', MobileSubmenu);
     });
   }
 
+  function _initContactForm(cfg) {
+  const form = document.getElementById('contact-form');
+  if (!form) return;
+
+  const status = document.getElementById('contact-status');
+  const toEmail = (cfg.company && cfg.company.hq && cfg.company.hq.email) ? cfg.company.hq.email : '';
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    const name = (form.elements.name?.value || '').trim();
+    const email = (form.elements.email?.value || '').trim();
+    const subject = (form.elements.subject?.value || 'Website Contact').trim();
+    const phone = (form.elements.phone?.value || '').trim();
+    const message = (form.elements.message?.value || '').trim();
+
+    if (!email || !message) {
+      if (status) {
+        status.style.display = 'block';
+        status.textContent = 'Please enter Email and Message.';
+      }
+      return;
+    }
+
+    const body =
+      `Name: ${name}\n` +
+      `Email: ${email}\n` +
+      `Phone: ${phone}\n\n` +
+      `${message}\n\n` +
+      `— Sent from AEROGEAR website`;
+
+    const mailto = `mailto:${encodeURIComponent(toEmail)}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    window.location.href = mailto;
+
+    if (status) {
+      status.style.display = 'block';
+      status.textContent = 'Opening your email app…';
+    }
+  });
+}
+
+
   function _escapeHtml(str) {
     return String(str || '')
       .replace(/&/g, '&amp;')
