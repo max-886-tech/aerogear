@@ -69,17 +69,7 @@
       "href": "https://www.amazon.in/stores/page/941C94E9-79FD-4688-A5D7-9779022CC8F6"
     }
   },
-  "contactPage": {
-  "title": "Help Is Here — From Design to Delivery",
-  "subtitle": "Have questions or need expert advice? Our team is just a message away! Contact us today for personalized guidance, product information, or support with your order.",
-  "submitText": "SEND MESSAGE",
-  "note": "This will open your email app with your message.",
-  "cards": {
-    "emailTitle": "Mail Address",
-    "addressTitle": "Office Location",
-    "phoneTitle": "Phone Number"
-  }
-},
+  
   "company": {
     "hq": {
       "title": "Corporate Headquarters",
