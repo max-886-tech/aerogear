@@ -5187,8 +5187,6 @@ blockquote {
   font-size: 18px;
   line-height: 1.5;
   color: #FEFEFE; }
-  .footer-style-2 .footer-heading {
-    color: #00234D; }
 
 .footer-logo {
   margin-bottom: 32px; }
@@ -5202,10 +5200,7 @@ blockquote {
   color: #FEFEFE;
   opacity: 0.7;
   text-decoration: none !important; }
-  .footer-style-2 .footer-menu-item a, .footer-style-2
-  .footer-text {
-    color: #00234D; }
-
+ 
 .footer-text {
   margin: 0; }
 
