@@ -31,7 +31,6 @@
   "vars": {
     "primary-color": "#0B1F3B",
     "secondary-color": "#F76B6A",
-
     "btn-primary-border-radius": "0.25rem",
     "btn-primary-color": "#fff",
     "btn-primary-background-color": "#0B1F3B",
@@ -40,7 +39,6 @@
     "btn-primary-background-hover-color": "#08172C",
     "btn-primary-border-hover-color": "#08172C",
     "btn-primary-font-weight": "500",
-
     "btn-secondary-border-radius": "0.25rem",
     "btn-secondary-color": "#0B1F3B",
     "btn-secondary-background-color": "transparent",
@@ -49,20 +47,17 @@
     "btn-secondary-background-hover-color": "#08172C",
     "btn-secondary-border-hover-color": "#08172C",
     "btn-secondary-font-weight": "500",
-
     "heading-color": "#0B0B0B",
     "title-color": "#0B0B0B",
     "body-color": "#111111",
     "body-background-color": "#FFFFFF",
-
     "body-font-size": "14px",
     "section-heading-color": "#0B0B0B",
     "section-heading-font-size": "48px",
     "section-subheading-color": "#333333",
     "section-subheading-font-size": "18px"
   }
-}
-,
+},
   "announcement": {
     "call": {
       "text": "Call: +91 790 009 8455",
