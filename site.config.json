@@ -1,0 +1,61 @@
+{
+  "siteName": "Bisum",
+  "homeUrl": "index.html",
+  "logo": {
+    "src": "assets/img/logo.png",
+    "alt": "Bisum"
+  },
+  "nav": [
+    {
+      "label": "Home",
+      "href": "index.html"
+    },
+    {
+      "label": "Shop",
+      "href": "Shop.html"
+    },
+    {
+      "label": "About",
+      "href": "about-us.html"
+    },
+    {
+      "label": "FAQ",
+      "href": "faq.html"
+    },
+    {
+      "label": "Contact",
+      "href": "contact.html"
+    }
+  ],
+  "theme": {
+    "vars": {
+      "primary-color": "#f76b6a",
+      "secondary-color": "#f0686e",
+      "btn-primary-border-radius": "0.25rem",
+      "btn-primary-color": "#fff",
+      "btn-primary-background-color": "#f76b6a",
+      "btn-primary-border-color": "#f76b6a",
+      "btn-primary-hover-color": "#fff",
+      "btn-primary-background-hover-color": "#f0686e",
+      "btn-primary-border-hover-color": "#f0686e",
+      "btn-primary-font-weight": "500",
+      "btn-secondary-border-radius": "0.25rem",
+      "btn-secondary-color": "#f76b6a",
+      "btn-secondary-background-color": "transparent",
+      "btn-secondary-border-color": "#f76b6a",
+      "btn-secondary-hover-color": "#fff",
+      "btn-secondary-background-hover-color": "#f0686e",
+      "btn-secondary-border-hover-color": "#f0686e",
+      "btn-secondary-font-weight": "500",
+      "heading-color": "#000",
+      "title-color": "#000",
+      "body-color": "#000",
+      "body-background-color": "#fff",
+      "body-font-size": "14px",
+      "section-heading-color": "#000",
+      "section-heading-font-size": "48px",
+      "section-subheading-color": "#000",
+      "section-subheading-font-size": "18px"
+    }
+  }
+}
