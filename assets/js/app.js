@@ -590,6 +590,7 @@ customElements.define('mobile-submenu', MobileSubmenu);
       siteName: 'AEROGEAR',
       homeUrl: 'index.html',
       logo: { src: 'assets/img/logo.png', alt: 'AEROGEAR' },
+      logow: { src: 'assets/img/logo_white.png', alt: 'AEROGEAR' },
       nav: [
         { label: 'Home', href: 'index.html' },
         { label: 'Shop', href: 'shop.html' },
@@ -621,6 +622,7 @@ customElements.define('mobile-submenu', MobileSubmenu);
       cfg = Object.assign({}, defaultCfg, await _fetchJSON('site.config.json'));
       // Merge nested objects safely
       cfg.logo = Object.assign({}, defaultCfg.logo, (cfg.logo || {}));
+      cfg.logow = Object.assign({}, defaultCfg.logow, (cfg.logow || {}));
       cfg.theme = Object.assign({}, defaultCfg.theme, (cfg.theme || {}));
       cfg.theme.vars = Object.assign({}, defaultCfg.theme.vars, (cfg.theme.vars || {}));
             cfg.nav = Array.isArray(cfg.nav) ? cfg.nav : defaultCfg.nav;
@@ -642,6 +644,7 @@ customElements.define('mobile-submenu', MobileSubmenu);
       SITE_NAME: cfg.siteName,
       HOME_URL: cfg.homeUrl,
       LOGO_SRC: cfg.logo.src,
+      LOGOW_SRC: cfg.logow.src,
       LOGO_ALT: cfg.logo.alt,
       NAV_ITEMS: navHtml,
       MOBILE_NAV_ITEMS: navHtml, // same list for drawer menu
