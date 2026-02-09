@@ -3,9 +3,9 @@
   "homeUrl": "index.html",
   "logo": {
     "src": "assets/img/logo.png",
-    "srcw": "assets/img/logo_white.png",
     "alt": "AEROGEAR"
   },
+  "logow": { "src": "assets/img/logo_white.png", "alt": "AEROGEAR" },
   "nav": [
     {
       "label": "Home",
