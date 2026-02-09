@@ -1,0 +1,90 @@
+{
+  "sections": [
+    {
+      "type": "slideshow",
+      "enabled": true,
+      "slides": [
+        {
+          "imgDesktop": "assets/img/slideshow/b1.jpg",
+          "imgMobile": "assets/img/slideshow/b1-m.jpg",
+          "tag": "Top Branded",
+          "title": "Best Bags 2022",
+          "ctaText": "SHOP NOW",
+          "ctaHref": "shop.html",
+          "align": "end"
+        },
+        {
+          "imgDesktop": "assets/img/slideshow/b2.jpg",
+          "imgMobile": "assets/img/slideshow/b2-m.jpg",
+          "tag": "Top Branded",
+          "title": "Best Bags 2022",
+          "ctaText": "SHOP NOW",
+          "ctaHref": "shop.html",
+          "align": "start"
+        }
+      ]
+    },
+
+    {
+      "type": "banner",
+      "enabled": true,
+      "items": [
+        {
+          "img": "assets/img/banner/bag-1.jpg",
+          "titleSmall": "Mini Backpack",
+          "title": "25% off on <br>all bags",
+          "href": "shop.html"
+        },
+        {
+          "img": "assets/img/banner/bag-2.jpg",
+          "titleSmall": "New Year Sell",
+          "title": "25% off <br>for women",
+          "href": "shop.html"
+        }
+      ]
+    },
+
+    {
+      "type": "collection",
+      "enabled": true,
+      "heading": "Popular Products",
+      "source": "products",
+      "limit": 8
+    },
+
+    {
+      "type": "category",
+      "enabled": true,
+      "heading": "Shop By Category",
+      "items": [
+        { "img": "assets/img/banner/bag-3.jpg", "tag": "New Arrivals", "title": "Women Beautiful Handbag", "href": "shop.html" },
+        { "img": "assets/img/banner/bag-4.jpg", "tag": "New Arrivals", "title": "Bag Bouquet", "href": "shop.html" },
+        { "img": "assets/img/banner/bag-5.jpg", "tag": "Quality Product", "title": "Leather collection", "href": "shop.html" }
+      ]
+    },
+
+    {
+      "type": "instagram",
+      "enabled": true,
+      "heading": "Bag & Water pot",
+      "subheading": "See how our customers styled shoe products in their foot",
+      "images": [
+        "assets/img/instagram/bag1.jpg",
+        "assets/img/instagram/bag2.jpg",
+        "assets/img/instagram/bag3.jpg",
+        "assets/img/instagram/bag4.jpg"
+      ]
+    },
+
+    {
+      "type": "brands",
+      "enabled": true,
+      "images": [
+        "assets/img/brand/1.png",
+        "assets/img/brand/2.png",
+        "assets/img/brand/3.png",
+        "assets/img/brand/4.png"
+      ]
+    }
+  ]
+}
