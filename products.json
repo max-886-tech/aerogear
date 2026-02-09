@@ -1,0 +1,24 @@
+[
+  {
+    "id": "B0DY59DQK4",
+    "title": "Smart Laptop Backpack 16 Inch | Waterproof Travel & Office Bag for Men & Women with Anti-Theft Design",
+    "url": "https://www.amazon.in/AEROGEAR-Waterproof-Anti-Theft-Backpack-Corporate/dp/B0DY59DQK4",
+    "category": "Backpacks",
+    "price": 999,
+    "compareAt": 1799,
+    "createdAt": "2026-02-01",
+    "images": { "primary": "assets/img/shop/2.jpg", "secondary": "assets/img/shop/1.jpg" },
+    "badge": { "text": "-44%", "class": "badge-percentage" }
+  },
+  {
+    "id": "P002",
+    "title": "Office Backpack 15.6 Inch | Water Resistant | USB Charging Port",
+    "url": "https://www.amazon.in/",
+    "category": "Office",
+    "price": 1299,
+    "compareAt": 0,
+    "createdAt": "2026-01-15",
+    "images": { "primary": "assets/img/shop/3.jpg", "secondary": "assets/img/shop/4.jpg" },
+    "badge": { "text": "New", "class": "badge-new" }
+  }
+]
