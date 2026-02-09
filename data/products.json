@@ -6,11 +6,11 @@
     "compareAt": 0,
     "createdAt": "",
     "links": {
-      "amazon": "https://www.amazon.in/AEROGEAR-Waterproof-Anti-Theft-Backpack-Corporate/dp/B0F4NH81HP?th=1",
-      "flipkart": ""
+      "amazon": "https://www.amazon.in/AEROGEAR-Waterproof-Anti-Theft-Backpack-Corporate/dp/B0F4NH81HP",
+      "flipkart": "https://www.flipkart.com/aerogear-casual-laptop-backpack-25-l/p/itm2b88b93b3e5ff"
     },
-    "images": { "primary": "", "secondary": "" },
-    "badge": { "text": "", "class": "" }
+    "images": { "primary": "assets/img/shop/1.jpg", "secondary": "assets/img/shop/2.jpg" },
+    "badge": { "text": "-50%", "class": "" }
   },
   {
     "id": "B0F45442HM",
@@ -19,8 +19,8 @@
     "compareAt": 0,
     "createdAt": "",
     "links": {
-      "amazon": "https://www.amazon.in/AEROGEAR-Backpack-Lightweight-Backpacks-Multipurpose/dp/B0F45442HM",
-      "flipkart": ""
+      "amazon": "",
+      "flipkart": "https://www.flipkart.com/aerogear-casual-laptop-backpack-25-l/p/itm2b88b93b3e5ff"
     },
     "images": { "primary": "", "secondary": "" },
     "badge": { "text": "", "class": "" }
