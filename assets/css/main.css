@@ -6064,4 +6064,45 @@ blockquote {
     margin-right: 0;
     margin-bottom: 15px; } }
 
-    
+  
+    /* AEROGEAR product buttons */
+.ae-btn-wrap{
+  display:flex;
+  gap:10px;
+  margin-top:14px;
+}
+
+.ae-btn{
+  flex:1;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
+  padding:10px 12px;
+  border-radius:10px;
+  font-size:14px;
+  font-weight:600;
+  text-decoration:none;
+  border:1px solid #000;
+  transition: all .2s ease;
+}
+
+.ae-btn-ic{ display:flex; }
+
+.ae-btn-amazon{
+  background:#000;
+  color:#fff;
+}
+
+.ae-btn-amazon:hover{
+  transform: translateY(-1px);
+}
+
+.ae-btn-flipkart{
+  background:#fff;
+  color:#000;
+}
+
+.ae-btn-flipkart:hover{
+  transform: translateY(-1px);
+}
