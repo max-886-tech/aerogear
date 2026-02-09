@@ -3,6 +3,7 @@
   "homeUrl": "index.html",
   "logo": {
     "src": "assets/img/logo.png",
+    "srcw": "assets/img/logo_white.png",
     "alt": "AEROGEAR"
   },
   "nav": [
