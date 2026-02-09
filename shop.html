@@ -1,629 +1,176 @@
 <!DOCTYPE html>
 <html class="no-js" lang="en">
 <head>
-<title>Shop | AEROGEAR</title>
-<!-- meta tags -->
-<meta charset="utf-8"/>
-<script>
-(function(){
-  var base = '/';
-  var host = location.hostname || '';
-  if (location.protocol === 'file:') {
-    base = './';
-  } else if (host.endsWith('github.io')) {
-    var parts = location.pathname.split('/').filter(Boolean);
-    if (parts.length && parts[0] && !parts[0].includes('.')) {
-      base = '/' + parts[0] + '/';
+  <title>Shop | AEROGEAR</title>
+  <meta charset="utf-8"/>
+
+  <script>
+  (function(){
+    var base = '/';
+    var host = location.hostname || '';
+    if (location.protocol === 'file:') {
+      base = './';
+    } else if (host.endsWith('github.io')) {
+      var parts = location.pathname.split('/').filter(Boolean);
+      if (parts.length && parts[0] && !parts[0].includes('.')) {
+        base = '/' + parts[0] + '/';
+      }
     }
-  }
-  var b = document.createElement('base');
-  b.href = base;
-  document.head.insertBefore(b, document.head.firstChild);
-  window.__SITE_BASE = base;
-})();
-</script><meta content="IE=edge" http-equiv="X-UA-Compatible"/>
-<meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport"/>
-<meta content="meta description" name="description"/>
-<link href="assets/img/favicon.png" rel="shortcut icon" type="image/x-icon"/>
-<!-- fonts -->
-<link href="https://fonts.googleapis.com" rel="preconnect"/>
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
-<!-- all css -->
-<link href="assets/css/main.css" rel="stylesheet"/></head>
+    var b = document.createElement('base');
+    b.href = base;
+    document.head.insertBefore(b, document.head.firstChild);
+    window.__SITE_BASE = base;
+  })();
+  </script>
+
+  <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+  <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport"/>
+  <meta content="meta description" name="description"/>
+  <link href="assets/img/favicon.png" rel="shortcut icon" type="image/x-icon"/>
+
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+
+  <link href="assets/css/main.css" rel="stylesheet"/>
+</head>
+
 <body data-page="shop">
 <div class="body-wrapper">
-<!-- header start -->
-<div id="site-header"></div>
-<!-- header end -->
-<!-- breadcrumb start -->
-<div class="breadcrumb">
-<div class="container">
-<ul class="list-unstyled d-flex align-items-center m-0">
-<li><a href="/">Home</a></li>
-<li>
-<svg class="icon icon-breadcrumb" fill="none" height="64" viewbox="0 0 64 64" width="64" xmlns="http://www.w3.org/2000/svg">
-<g opacity="0.4">
-<path d="M25.9375 8.5625L23.0625 11.4375L43.625 32L23.0625 52.5625L25.9375 55.4375L47.9375 33.4375L49.3125 32L47.9375 30.5625L25.9375 8.5625Z" fill="#000"></path>
-</g>
-</svg>
-</li>
-<li>Products</li>
-</ul>
-</div>
-</div>
-<!-- breadcrumb end -->
-<main class="content-for-layout" id="MainContent">
-<div class="collection mt-100">
-<div class="container">
-<div class="row">
-<!-- product area start -->
-<div class="col-lg-12 col-md-12 col-12">
-<div class="filter-sort-wrapper d-flex justify-content-between flex-wrap">
-<div class="collection-title-wrap d-flex align-items-end">
-<h2 class="collection-title heading_24 mb-0">All products</h2>
-</div>
-</div>
-</div>
-<div class="collection-product-container">
-<div class="row">
 
+  <div id="site-header"></div>
 
+  <!-- breadcrumb -->
+  <div class="breadcrumb">
+    <div class="container">
+      <ul class="list-unstyled d-flex align-items-center m-0">
+        <li><a href="/">Home</a></li>
+        <li>
+          <svg class="icon icon-breadcrumb" fill="none" height="64" viewBox="0 0 64 64" width="64" xmlns="http://www.w3.org/2000/svg">
+            <g opacity="0.4">
+              <path d="M25.9375 8.5625L23.0625 11.4375L43.625 32L23.0625 52.5625L25.9375 55.4375L47.9375 33.4375L49.3125 32L47.9375 30.5625L25.9375 8.5625Z" fill="#000"></path>
+            </g>
+          </svg>
+        </li>
+        <li>Products</li>
+      </ul>
+    </div>
+  </div>
 
+  <main class="content-for-layout" id="MainContent">
+    <div class="collection mt-100">
+      <div class="container">
+        <div class="row">
 
+          <!-- LEFT: products -->
+          <div class="col-lg-9 col-md-12 col-12">
 
+            <!-- top bar -->
+            <div class="filter-sort-wrapper d-flex justify-content-between align-items-center flex-wrap gap-3 mb-4">
+              <div class="collection-title-wrap d-flex align-items-end">
+                <h2 class="collection-title heading_24 mb-0">All products</h2>
+                <span class="ms-3 text_14" id="results-count"></span>
+              </div>
 
-<div class="col-lg-3 col-md-6 col-6" data-aos="fade-up" data-aos-duration="700">
-<div class="product-card">
-<div class="product-card-img">
-<a class="hover-switch" href="https://www.amazon.in/AEROGEAR-Waterproof-Anti-Theft-Backpack-Corporate/dp/B0DY59DQK4" target="_blank">
-<img alt="product-img" class="secondary-img" src="assets/img/shop/1.jpg"/>
-<img alt="product-img" class="primary-img" src="assets/img/shop/2.jpg"/>
-</a>
-<div class="product-badge">
-<span class="badge-label badge-percentage rounded">-44%</span>
-</div>
-</div>
-<div class="product-card-details">
-<h3 class="product-card-title">
-<a href="https://www.amazon.in/AEROGEAR-Waterproof-Anti-Theft-Backpack-Corporate/dp/B0DY59DQK4" target="_blank">Smart Laptop Backpack 16 Inch | Waterproof Travel & Office Bag for Men & Women with Anti-Theft Design</a>
-</h3>
-</div>
-</div>
+              <div class="d-flex align-items-center gap-2 flex-wrap">
+                <input id="search-input" class="form-control" style="max-width:260px"
+                       type="search" placeholder="Search products..." />
+
+                <select id="sort-select" class="form-select" style="max-width:220px">
+                  <option value="featured">Featured</option>
+                  <option value="newest">Newest</option>
+                  <option value="price_asc">Price: low to high</option>
+                  <option value="price_desc">Price: high to low</option>
+                  <option value="az">Alphabetically, A-Z</option>
+                  <option value="za">Alphabetically, Z-A</option>
+                </select>
+
+                <!-- mobile filter open button (optional) -->
+                <button class="btn btn-dark d-lg-none filter-drawer-trigger" type="button">
+                  Filters
+                </button>
+              </div>
+            </div>
+
+            <!-- grid -->
+            <div class="collection-product-container">
+              <div class="row" id="products-grid"></div>
+            </div>
+
+            <!-- pagination -->
+            <div class="pagination justify-content-center mt-100">
+              <nav>
+                <ul class="pagination m-0 d-flex align-items-center" id="pagination"></ul>
+              </nav>
+            </div>
+
+          </div>
+
+          <!-- RIGHT: sidebar -->
+          <div class="col-lg-3 col-md-12 col-12">
+            <div class="collection-filter filter-drawer">
+
+              <!-- mobile close header -->
+              <div class="filter-widget d-lg-none d-flex align-items-center justify-content-between">
+                <h5 class="heading_24 mb-0">
+                  Filters
+                  <button class="btn-close text-reset filter-drawer-trigger d-lg-none" type="button"></button>
+                </h5>
+              </div>
+
+              <!-- mobile sort list (kept, but now works via JS) -->
+              <div class="filter-widget d-lg-none">
+                <div class="filter-header faq-heading heading_18 d-flex align-items-center justify-content-between border-bottom"
+                     data-bs-target="#filter-mobile-sort" data-bs-toggle="collapse">
+                  <span>
+                    <span class="sorting-title me-2">Sort by:</span>
+                    <span class="active-sorting" id="mobile-active-sorting">Featured</span>
+                  </span>
+                  <span class="faq-heading-icon">
+                    <svg class="icon icon-down" fill="none" height="24" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+                      <polyline points="6 9 12 15 18 9"></polyline>
+                    </svg>
+                  </span>
+                </div>
+
+                <div class="accordion-collapse collapse show" id="filter-mobile-sort">
+                  <ul class="sorting-lists-mobile list-unstyled m-0" id="mobile-sort-list">
+                    <li><a class="text_14" href="#" data-sort="featured">Featured</a></li>
+                    <li><a class="text_14" href="#" data-sort="az">Alphabetically, A-Z</a></li>
+                    <li><a class="text_14" href="#" data-sort="za">Alphabetically, Z-A</a></li>
+                    <li><a class="text_14" href="#" data-sort="price_asc">Price, low to high</a></li>
+                    <li><a class="text_14" href="#" data-sort="price_desc">Price, high to low</a></li>
+                    <li><a class="text_14" href="#" data-sort="newest">Date, new to old</a></li>
+                  </ul>
+                </div>
+              </div>
+
+              <!-- categories -->
+              <div class="filter-widget mt-4">
+                <h5 class="heading_18 mb-3">Categories</h5>
+                <div id="category-filter" class="d-flex flex-column gap-2"></div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <button id="scrollup">
+    <svg fill="none" height="24" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+      <polyline points="18 15 12 9 6 15"></polyline>
+    </svg>
+  </button>
+
+  <div id="site-overlays"></div>
 </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-<div class="col-lg-3 col-md-6 col-6" data-aos="fade-up" data-aos-duration="700">
-<div class="product-card">
-<div class="product-card-img">
-<a class="hover-switch" href="product-details.html">
-<img alt="product-img" class="secondary-img" src="assets/img/products/furniture/10.jpg"/>
-<img alt="product-img" class="primary-img" src="assets/img/products/furniture/2.jpg"/>
-</a>
-</div>
-<div class="product-card-details">
-<ul class="color-lists list-unstyled d-flex align-items-center">
-<li><a class="color-swatch swatch-black active" href="javascript:void(0)"></a></li>
-<li><a class="color-swatch swatch-cyan" href="javascript:void(0)"></a></li>
-<li><a class="color-swatch swatch-purple" href="javascript:void(0)"></a>
-</li>
-</ul>
-<h3 class="product-card-title">
-<a href="product-details.html">Vita Lounge Chair</a>
-</h3>
-<div class="product-card-price">
-<span class="card-price-regular">$1529</span>
-<span class="card-price-compare text-decoration-line-through">$1759</span>
-</div>
-</div>
-</div>
-</div>
-<div class="col-lg-3 col-md-6 col-6" data-aos="fade-up" data-aos-duration="700">
-<div class="product-card">
-<div class="product-card-img">
-<a class="hover-switch" href="product-details.html">
-<img alt="product-img" class="secondary-img" src="assets/img/products/furniture/11.jpg"/>
-<img alt="product-img" class="primary-img" src="assets/img/products/furniture/3.jpg"/>
-</a>
-<div class="product-badge">
-<span class="badge-label badge-new rounded">New</span>
-</div>
-<div class="product-card-action product-card-action-2 justify-content-center">
-<svg fill="none" height="26" viewbox="0 0 26 26" width="26" xmlns="http://www.w3.org/2000/svg">
-<path d="M10 0C15.5117 0 20 4.48828 20 10C20 12.3945 19.1602 14.5898 17.75 16.3125L25.7188 24.2812L24.2812 25.7188L16.3125 17.75C14.5898 19.1602 12.3945 20 10 20C4.48828 20 0 15.5117 0 10C0 4.48828 4.48828 0 10 0ZM10 2C5.57031 2 2 5.57031 2 10C2 14.4297 5.57031 18 10 18C14.4297 18 18 14.4297 18 10C18 5.57031 14.4297 2 10 2ZM11 6V9H14V11H11V14H9V11H6V9H9V6H11Z" fill="#00234D"></path>
-</svg>
-</a>
-<a class="action-card action-wishlist" href="#">
-<svg class="icon icon-wishlist" fill="none" height="22" viewbox="0 0 26 22" width="26" xmlns="http://www.w3.org/2000/svg">
-<path d="M6.96429 0.000183105C3.12305 0.000183105 0 3.10686 0 6.84843C0 8.15388 0.602121 9.28455 1.16071 10.1014C1.71931 10.9181 2.29241 11.4425 2.29241 11.4425L12.3326 21.3439L13 22.0002L13.6674 21.3439L23.7076 11.4425C23.7076 11.4425 26 9.45576 26 6.84843C26 3.10686 22.877 0.000183105 19.0357 0.000183105C15.8474 0.000183105 13.7944 1.88702 13 2.68241C12.2056 1.88702 10.1526 0.000183105 6.96429 0.000183105ZM6.96429 1.82638C9.73912 1.82638 12.3036 4.48008 12.3036 4.48008L13 5.25051L13.6964 4.48008C13.6964 4.48008 16.2609 1.82638 19.0357 1.82638C21.8613 1.82638 24.1429 4.10557 24.1429 6.84843C24.1429 8.25732 22.4018 10.1584 22.4018 10.1584L13 19.4036L3.59821 10.1584C3.59821 10.1584 3.14844 9.73397 2.69866 9.07411C2.24888 8.41426 1.85714 7.55466 1.85714 6.84843C1.85714 4.10557 4.13867 1.82638 6.96429 1.82638Z" fill="#00234D"></path>
-</svg>
-</a>
-<a class="action-card action-addtocart" href="#">
-<svg class="icon icon-cart" fill="none" height="26" viewbox="0 0 24 26" width="24" xmlns="http://www.w3.org/2000/svg">
-<path d="M12 0.000183105C9.25391 0.000183105 7 2.25409 7 5.00018V6.00018H2.0625L2 6.93768L1 24.9377L0.9375 26.0002H23.0625L23 24.9377L22 6.93768L21.9375 6.00018H17V5.00018C17 2.25409 14.7461 0.000183105 12 0.000183105ZM12 2.00018C13.6562 2.00018 15 3.34393 15 5.00018V6.00018H9V5.00018C9 3.34393 10.3438 2.00018 12 2.00018ZM3.9375 8.00018H7V11.0002H9V8.00018H15V11.0002H17V8.00018H20.0625L20.9375 24.0002H3.0625L3.9375 8.00018Z" fill="#00234D"></path>
-</svg>
-</a>
-</div>
-</div>
-<div class="product-card-details">
-<ul class="color-lists list-unstyled d-flex align-items-center">
-<li><a class="color-swatch swatch-black active" href="javascript:void(0)"></a></li>
-<li><a class="color-swatch swatch-cyan" href="javascript:void(0)"></a></li>
-<li><a class="color-swatch swatch-purple" href="javascript:void(0)"></a>
-</li>
-</ul>
-<h3 class="product-card-title">
-<a href="product-details.html">Sarno Dining Chair</a>
-</h3>
-<div class="product-card-price">
-<span class="card-price-regular">$1529</span>
-<span class="card-price-compare text-decoration-line-through">$1759</span>
-</div>
-</div>
-</div>
-</div>
-<div class="col-lg-3 col-md-6 col-6" data-aos="fade-up" data-aos-duration="700">
-<div class="product-card">
-<div class="product-card-img">
-<a class="hover-switch" href="product-details.html">
-<img alt="product-img" class="secondary-img" src="assets/img/products/furniture/14.jpg"/>
-<img alt="product-img" class="primary-img" src="assets/img/products/furniture/4.jpg"/>
-</a>
-<div class="product-card-action product-card-action-2 justify-content-center">
-<svg fill="none" height="26" viewbox="0 0 26 26" width="26" xmlns="http://www.w3.org/2000/svg">
-<path d="M10 0C15.5117 0 20 4.48828 20 10C20 12.3945 19.1602 14.5898 17.75 16.3125L25.7188 24.2812L24.2812 25.7188L16.3125 17.75C14.5898 19.1602 12.3945 20 10 20C4.48828 20 0 15.5117 0 10C0 4.48828 4.48828 0 10 0ZM10 2C5.57031 2 2 5.57031 2 10C2 14.4297 5.57031 18 10 18C14.4297 18 18 14.4297 18 10C18 5.57031 14.4297 2 10 2ZM11 6V9H14V11H11V14H9V11H6V9H9V6H11Z" fill="#00234D"></path>
-</svg>
-</a>
-<a class="action-card action-wishlist" href="#">
-<svg class="icon icon-wishlist" fill="none" height="22" viewbox="0 0 26 22" width="26" xmlns="http://www.w3.org/2000/svg">
-<path d="M6.96429 0.000183105C3.12305 0.000183105 0 3.10686 0 6.84843C0 8.15388 0.602121 9.28455 1.16071 10.1014C1.71931 10.9181 2.29241 11.4425 2.29241 11.4425L12.3326 21.3439L13 22.0002L13.6674 21.3439L23.7076 11.4425C23.7076 11.4425 26 9.45576 26 6.84843C26 3.10686 22.877 0.000183105 19.0357 0.000183105C15.8474 0.000183105 13.7944 1.88702 13 2.68241C12.2056 1.88702 10.1526 0.000183105 6.96429 0.000183105ZM6.96429 1.82638C9.73912 1.82638 12.3036 4.48008 12.3036 4.48008L13 5.25051L13.6964 4.48008C13.6964 4.48008 16.2609 1.82638 19.0357 1.82638C21.8613 1.82638 24.1429 4.10557 24.1429 6.84843C24.1429 8.25732 22.4018 10.1584 22.4018 10.1584L13 19.4036L3.59821 10.1584C3.59821 10.1584 3.14844 9.73397 2.69866 9.07411C2.24888 8.41426 1.85714 7.55466 1.85714 6.84843C1.85714 4.10557 4.13867 1.82638 6.96429 1.82638Z" fill="#00234D"></path>
-</svg>
-</a>
-<a class="action-card action-addtocart" href="#">
-<svg class="icon icon-cart" fill="none" height="26" viewbox="0 0 24 26" width="24" xmlns="http://www.w3.org/2000/svg">
-<path d="M12 0.000183105C9.25391 0.000183105 7 2.25409 7 5.00018V6.00018H2.0625L2 6.93768L1 24.9377L0.9375 26.0002H23.0625L23 24.9377L22 6.93768L21.9375 6.00018H17V5.00018C17 2.25409 14.7461 0.000183105 12 0.000183105ZM12 2.00018C13.6562 2.00018 15 3.34393 15 5.00018V6.00018H9V5.00018C9 3.34393 10.3438 2.00018 12 2.00018ZM3.9375 8.00018H7V11.0002H9V8.00018H15V11.0002H17V8.00018H20.0625L20.9375 24.0002H3.0625L3.9375 8.00018Z" fill="#00234D"></path>
-</svg>
-</a>
-</div>
-</div>
-<div class="product-card-details">
-<ul class="color-lists list-unstyled d-flex align-items-center">
-<li><a class="color-swatch swatch-black active" href="javascript:void(0)"></a></li>
-<li><a class="color-swatch swatch-cyan" href="javascript:void(0)"></a></li>
-<li><a class="color-swatch swatch-purple" href="javascript:void(0)"></a>
-</li>
-</ul>
-<h3 class="product-card-title">
-<a href="product-details.html">AEROGEAR tea table</a>
-</h3>
-<div class="product-card-price">
-<span class="card-price-regular">$1529</span>
-<span class="card-price-compare text-decoration-line-through">$1759</span>
-</div>
-</div>
-</div>
-</div>
-<div class="col-lg-3 col-md-6 col-6" data-aos="fade-up" data-aos-duration="700">
-<div class="product-card">
-<div class="product-card-img">
-<a class="hover-switch" href="product-details.html">
-<img alt="product-img" class="secondary-img" src="assets/img/products/furniture/15.jpg"/>
-<img alt="product-img" class="primary-img" src="assets/img/products/furniture/5.jpg"/>
-</a>
-<div class="product-card-action product-card-action-2 justify-content-center">
-<svg fill="none" height="26" viewbox="0 0 26 26" width="26" xmlns="http://www.w3.org/2000/svg">
-<path d="M10 0C15.5117 0 20 4.48828 20 10C20 12.3945 19.1602 14.5898 17.75 16.3125L25.7188 24.2812L24.2812 25.7188L16.3125 17.75C14.5898 19.1602 12.3945 20 10 20C4.48828 20 0 15.5117 0 10C0 4.48828 4.48828 0 10 0ZM10 2C5.57031 2 2 5.57031 2 10C2 14.4297 5.57031 18 10 18C14.4297 18 18 14.4297 18 10C18 5.57031 14.4297 2 10 2ZM11 6V9H14V11H11V14H9V11H6V9H9V6H11Z" fill="#00234D"></path>
-</svg>
-</a>
-<a class="action-card action-wishlist" href="#">
-<svg class="icon icon-wishlist" fill="none" height="22" viewbox="0 0 26 22" width="26" xmlns="http://www.w3.org/2000/svg">
-<path d="M6.96429 0.000183105C3.12305 0.000183105 0 3.10686 0 6.84843C0 8.15388 0.602121 9.28455 1.16071 10.1014C1.71931 10.9181 2.29241 11.4425 2.29241 11.4425L12.3326 21.3439L13 22.0002L13.6674 21.3439L23.7076 11.4425C23.7076 11.4425 26 9.45576 26 6.84843C26 3.10686 22.877 0.000183105 19.0357 0.000183105C15.8474 0.000183105 13.7944 1.88702 13 2.68241C12.2056 1.88702 10.1526 0.000183105 6.96429 0.000183105ZM6.96429 1.82638C9.73912 1.82638 12.3036 4.48008 12.3036 4.48008L13 5.25051L13.6964 4.48008C13.6964 4.48008 16.2609 1.82638 19.0357 1.82638C21.8613 1.82638 24.1429 4.10557 24.1429 6.84843C24.1429 8.25732 22.4018 10.1584 22.4018 10.1584L13 19.4036L3.59821 10.1584C3.59821 10.1584 3.14844 9.73397 2.69866 9.07411C2.24888 8.41426 1.85714 7.55466 1.85714 6.84843C1.85714 4.10557 4.13867 1.82638 6.96429 1.82638Z" fill="#00234D"></path>
-</svg>
-</a>
-<a class="action-card action-addtocart" href="#">
-<svg class="icon icon-cart" fill="none" height="26" viewbox="0 0 24 26" width="24" xmlns="http://www.w3.org/2000/svg">
-<path d="M12 0.000183105C9.25391 0.000183105 7 2.25409 7 5.00018V6.00018H2.0625L2 6.93768L1 24.9377L0.9375 26.0002H23.0625L23 24.9377L22 6.93768L21.9375 6.00018H17V5.00018C17 2.25409 14.7461 0.000183105 12 0.000183105ZM12 2.00018C13.6562 2.00018 15 3.34393 15 5.00018V6.00018H9V5.00018C9 3.34393 10.3438 2.00018 12 2.00018ZM3.9375 8.00018H7V11.0002H9V8.00018H15V11.0002H17V8.00018H20.0625L20.9375 24.0002H3.0625L3.9375 8.00018Z" fill="#00234D"></path>
-</svg>
-</a>
-</div>
-</div>
-<div class="product-card-details">
-<ul class="color-lists list-unstyled d-flex align-items-center">
-<li><a class="color-swatch swatch-black active" href="javascript:void(0)"></a></li>
-<li><a class="color-swatch swatch-cyan" href="javascript:void(0)"></a></li>
-<li><a class="color-swatch swatch-purple" href="javascript:void(0)"></a>
-</li>
-</ul>
-<h3 class="product-card-title">
-<a href="product-details.html">Eliot Reversible tool</a>
-</h3>
-<div class="product-card-price">
-<span class="card-price-regular">$1529</span>
-<span class="card-price-compare text-decoration-line-through">$1759</span>
-</div>
-</div>
-</div>
-</div>
-<div class="col-lg-3 col-md-6 col-6" data-aos="fade-up" data-aos-duration="700">
-<div class="product-card">
-<div class="product-card-img">
-<a class="hover-switch" href="product-details.html">
-<img alt="product-img" class="secondary-img" src="assets/img/products/furniture/16.jpg"/>
-<img alt="product-img" class="primary-img" src="assets/img/products/furniture/6.jpg"/>
-</a>
-<div class="product-card-action product-card-action-2 justify-content-center">
-<svg fill="none" height="26" viewbox="0 0 26 26" width="26" xmlns="http://www.w3.org/2000/svg">
-<path d="M10 0C15.5117 0 20 4.48828 20 10C20 12.3945 19.1602 14.5898 17.75 16.3125L25.7188 24.2812L24.2812 25.7188L16.3125 17.75C14.5898 19.1602 12.3945 20 10 20C4.48828 20 0 15.5117 0 10C0 4.48828 4.48828 0 10 0ZM10 2C5.57031 2 2 5.57031 2 10C2 14.4297 5.57031 18 10 18C14.4297 18 18 14.4297 18 10C18 5.57031 14.4297 2 10 2ZM11 6V9H14V11H11V14H9V11H6V9H9V6H11Z" fill="#00234D"></path>
-</svg>
-</a>
-<a class="action-card action-wishlist" href="#">
-<svg class="icon icon-wishlist" fill="none" height="22" viewbox="0 0 26 22" width="26" xmlns="http://www.w3.org/2000/svg">
-<path d="M6.96429 0.000183105C3.12305 0.000183105 0 3.10686 0 6.84843C0 8.15388 0.602121 9.28455 1.16071 10.1014C1.71931 10.9181 2.29241 11.4425 2.29241 11.4425L12.3326 21.3439L13 22.0002L13.6674 21.3439L23.7076 11.4425C23.7076 11.4425 26 9.45576 26 6.84843C26 3.10686 22.877 0.000183105 19.0357 0.000183105C15.8474 0.000183105 13.7944 1.88702 13 2.68241C12.2056 1.88702 10.1526 0.000183105 6.96429 0.000183105ZM6.96429 1.82638C9.73912 1.82638 12.3036 4.48008 12.3036 4.48008L13 5.25051L13.6964 4.48008C13.6964 4.48008 16.2609 1.82638 19.0357 1.82638C21.8613 1.82638 24.1429 4.10557 24.1429 6.84843C24.1429 8.25732 22.4018 10.1584 22.4018 10.1584L13 19.4036L3.59821 10.1584C3.59821 10.1584 3.14844 9.73397 2.69866 9.07411C2.24888 8.41426 1.85714 7.55466 1.85714 6.84843C1.85714 4.10557 4.13867 1.82638 6.96429 1.82638Z" fill="#00234D"></path>
-</svg>
-</a>
-<a class="action-card action-addtocart" href="#">
-<svg class="icon icon-cart" fill="none" height="26" viewbox="0 0 24 26" width="24" xmlns="http://www.w3.org/2000/svg">
-<path d="M12 0.000183105C9.25391 0.000183105 7 2.25409 7 5.00018V6.00018H2.0625L2 6.93768L1 24.9377L0.9375 26.0002H23.0625L23 24.9377L22 6.93768L21.9375 6.00018H17V5.00018C17 2.25409 14.7461 0.000183105 12 0.000183105ZM12 2.00018C13.6562 2.00018 15 3.34393 15 5.00018V6.00018H9V5.00018C9 3.34393 10.3438 2.00018 12 2.00018ZM3.9375 8.00018H7V11.0002H9V8.00018H15V11.0002H17V8.00018H20.0625L20.9375 24.0002H3.0625L3.9375 8.00018Z" fill="#00234D"></path>
-</svg>
-</a>
-</div>
-</div>
-<div class="product-card-details">
-<ul class="color-lists list-unstyled d-flex align-items-center">
-<li><a class="color-swatch swatch-black active" href="javascript:void(0)"></a></li>
-<li><a class="color-swatch swatch-cyan" href="javascript:void(0)"></a></li>
-<li><a class="color-swatch swatch-purple" href="javascript:void(0)"></a>
-</li>
-</ul>
-<h3 class="product-card-title">
-<a href="product-details.html">Vita Lounge wardrobe</a>
-</h3>
-<div class="product-card-price">
-<span class="card-price-regular">$1529</span>
-<span class="card-price-compare text-decoration-line-through">$1759</span>
-</div>
-</div>
-</div>
-</div>
-<div class="col-lg-3 col-md-6 col-6" data-aos="fade-up" data-aos-duration="700">
-<div class="product-card">
-<div class="product-card-img">
-<a class="hover-switch" href="product-details.html">
-<img alt="product-img" class="secondary-img" src="assets/img/products/furniture/17.jpg"/>
-<img alt="product-img" class="primary-img" src="assets/img/products/furniture/7.jpg"/>
-</a>
-<div class="product-card-action product-card-action-2 justify-content-center">
-<svg fill="none" height="26" viewbox="0 0 26 26" width="26" xmlns="http://www.w3.org/2000/svg">
-<path d="M10 0C15.5117 0 20 4.48828 20 10C20 12.3945 19.1602 14.5898 17.75 16.3125L25.7188 24.2812L24.2812 25.7188L16.3125 17.75C14.5898 19.1602 12.3945 20 10 20C4.48828 20 0 15.5117 0 10C0 4.48828 4.48828 0 10 0ZM10 2C5.57031 2 2 5.57031 2 10C2 14.4297 5.57031 18 10 18C14.4297 18 18 14.4297 18 10C18 5.57031 14.4297 2 10 2ZM11 6V9H14V11H11V14H9V11H6V9H9V6H11Z" fill="#00234D"></path>
-</svg>
-</a>
-<a class="action-card action-wishlist" href="#">
-<svg class="icon icon-wishlist" fill="none" height="22" viewbox="0 0 26 22" width="26" xmlns="http://www.w3.org/2000/svg">
-<path d="M6.96429 0.000183105C3.12305 0.000183105 0 3.10686 0 6.84843C0 8.15388 0.602121 9.28455 1.16071 10.1014C1.71931 10.9181 2.29241 11.4425 2.29241 11.4425L12.3326 21.3439L13 22.0002L13.6674 21.3439L23.7076 11.4425C23.7076 11.4425 26 9.45576 26 6.84843C26 3.10686 22.877 0.000183105 19.0357 0.000183105C15.8474 0.000183105 13.7944 1.88702 13 2.68241C12.2056 1.88702 10.1526 0.000183105 6.96429 0.000183105ZM6.96429 1.82638C9.73912 1.82638 12.3036 4.48008 12.3036 4.48008L13 5.25051L13.6964 4.48008C13.6964 4.48008 16.2609 1.82638 19.0357 1.82638C21.8613 1.82638 24.1429 4.10557 24.1429 6.84843C24.1429 8.25732 22.4018 10.1584 22.4018 10.1584L13 19.4036L3.59821 10.1584C3.59821 10.1584 3.14844 9.73397 2.69866 9.07411C2.24888 8.41426 1.85714 7.55466 1.85714 6.84843C1.85714 4.10557 4.13867 1.82638 6.96429 1.82638Z" fill="#00234D"></path>
-</svg>
-</a>
-<a class="action-card action-addtocart" href="#">
-<svg class="icon icon-cart" fill="none" height="26" viewbox="0 0 24 26" width="24" xmlns="http://www.w3.org/2000/svg">
-<path d="M12 0.000183105C9.25391 0.000183105 7 2.25409 7 5.00018V6.00018H2.0625L2 6.93768L1 24.9377L0.9375 26.0002H23.0625L23 24.9377L22 6.93768L21.9375 6.00018H17V5.00018C17 2.25409 14.7461 0.000183105 12 0.000183105ZM12 2.00018C13.6562 2.00018 15 3.34393 15 5.00018V6.00018H9V5.00018C9 3.34393 10.3438 2.00018 12 2.00018ZM3.9375 8.00018H7V11.0002H9V8.00018H15V11.0002H17V8.00018H20.0625L20.9375 24.0002H3.0625L3.9375 8.00018Z" fill="#00234D"></path>
-</svg>
-</a>
-</div>
-</div>
-<div class="product-card-details">
-<ul class="color-lists list-unstyled d-flex align-items-center">
-<li><a class="color-swatch swatch-black active" href="javascript:void(0)"></a></li>
-<li><a class="color-swatch swatch-cyan" href="javascript:void(0)"></a></li>
-<li><a class="color-swatch swatch-purple" href="javascript:void(0)"></a>
-</li>
-</ul>
-<h3 class="product-card-title">
-<a href="product-details.html">Sarno Dining Chair</a>
-</h3>
-<div class="product-card-price">
-<span class="card-price-regular">$1529</span>
-<span class="card-price-compare text-decoration-line-through">$1759</span>
-</div>
-</div>
-</div>
-</div>
-<div class="col-lg-3 col-md-6 col-6" data-aos="fade-up" data-aos-duration="700">
-<div class="product-card">
-<div class="product-card-img">
-<a class="hover-switch" href="product-details.html">
-<img alt="product-img" class="secondary-img" src="assets/img/products/furniture/19.jpg"/>
-<img alt="product-img" class="primary-img" src="assets/img/products/furniture/8.jpg"/>
-</a>
-<div class="product-card-action product-card-action-2 justify-content-center">
-<svg fill="none" height="26" viewbox="0 0 26 26" width="26" xmlns="http://www.w3.org/2000/svg">
-<path d="M10 0C15.5117 0 20 4.48828 20 10C20 12.3945 19.1602 14.5898 17.75 16.3125L25.7188 24.2812L24.2812 25.7188L16.3125 17.75C14.5898 19.1602 12.3945 20 10 20C4.48828 20 0 15.5117 0 10C0 4.48828 4.48828 0 10 0ZM10 2C5.57031 2 2 5.57031 2 10C2 14.4297 5.57031 18 10 18C14.4297 18 18 14.4297 18 10C18 5.57031 14.4297 2 10 2ZM11 6V9H14V11H11V14H9V11H6V9H9V6H11Z" fill="#00234D"></path>
-</svg>
-</a>
-<a class="action-card action-wishlist" href="#">
-<svg class="icon icon-wishlist" fill="none" height="22" viewbox="0 0 26 22" width="26" xmlns="http://www.w3.org/2000/svg">
-<path d="M6.96429 0.000183105C3.12305 0.000183105 0 3.10686 0 6.84843C0 8.15388 0.602121 9.28455 1.16071 10.1014C1.71931 10.9181 2.29241 11.4425 2.29241 11.4425L12.3326 21.3439L13 22.0002L13.6674 21.3439L23.7076 11.4425C23.7076 11.4425 26 9.45576 26 6.84843C26 3.10686 22.877 0.000183105 19.0357 0.000183105C15.8474 0.000183105 13.7944 1.88702 13 2.68241C12.2056 1.88702 10.1526 0.000183105 6.96429 0.000183105ZM6.96429 1.82638C9.73912 1.82638 12.3036 4.48008 12.3036 4.48008L13 5.25051L13.6964 4.48008C13.6964 4.48008 16.2609 1.82638 19.0357 1.82638C21.8613 1.82638 24.1429 4.10557 24.1429 6.84843C24.1429 8.25732 22.4018 10.1584 22.4018 10.1584L13 19.4036L3.59821 10.1584C3.59821 10.1584 3.14844 9.73397 2.69866 9.07411C2.24888 8.41426 1.85714 7.55466 1.85714 6.84843C1.85714 4.10557 4.13867 1.82638 6.96429 1.82638Z" fill="#00234D"></path>
-</svg>
-</a>
-<a class="action-card action-addtocart" href="#">
-<svg class="icon icon-cart" fill="none" height="26" viewbox="0 0 24 26" width="24" xmlns="http://www.w3.org/2000/svg">
-<path d="M12 0.000183105C9.25391 0.000183105 7 2.25409 7 5.00018V6.00018H2.0625L2 6.93768L1 24.9377L0.9375 26.0002H23.0625L23 24.9377L22 6.93768L21.9375 6.00018H17V5.00018C17 2.25409 14.7461 0.000183105 12 0.000183105ZM12 2.00018C13.6562 2.00018 15 3.34393 15 5.00018V6.00018H9V5.00018C9 3.34393 10.3438 2.00018 12 2.00018ZM3.9375 8.00018H7V11.0002H9V8.00018H15V11.0002H17V8.00018H20.0625L20.9375 24.0002H3.0625L3.9375 8.00018Z" fill="#00234D"></path>
-</svg>
-</a>
-</div>
-</div>
-<div class="product-card-details">
-<ul class="color-lists list-unstyled d-flex align-items-center">
-<li><a class="color-swatch swatch-black active" href="javascript:void(0)"></a></li>
-<li><a class="color-swatch swatch-cyan" href="javascript:void(0)"></a></li>
-<li><a class="color-swatch swatch-purple" href="javascript:void(0)"></a>
-</li>
-</ul>
-<h3 class="product-card-title">
-<a href="product-details.html">Vita Lounge Chair</a>
-</h3>
-<div class="product-card-price">
-<span class="card-price-regular">$1529</span>
-<span class="card-price-compare text-decoration-line-through">$1759</span>
-</div>
-</div>
-</div>
-</div>
-<div class="col-lg-3 col-md-6 col-6" data-aos="fade-up" data-aos-duration="700">
-<div class="product-card">
-<div class="product-card-img">
-<a class="hover-switch" href="product-details.html">
-<img alt="product-img" class="secondary-img" src="assets/img/products/furniture/29.jpg"/>
-<img alt="product-img" class="primary-img" src="assets/img/products/furniture/9.jpg"/>
-</a>
-<div class="product-card-action product-card-action-2 justify-content-center">
-<svg fill="none" height="26" viewbox="0 0 26 26" width="26" xmlns="http://www.w3.org/2000/svg">
-<path d="M10 0C15.5117 0 20 4.48828 20 10C20 12.3945 19.1602 14.5898 17.75 16.3125L25.7188 24.2812L24.2812 25.7188L16.3125 17.75C14.5898 19.1602 12.3945 20 10 20C4.48828 20 0 15.5117 0 10C0 4.48828 4.48828 0 10 0ZM10 2C5.57031 2 2 5.57031 2 10C2 14.4297 5.57031 18 10 18C14.4297 18 18 14.4297 18 10C18 5.57031 14.4297 2 10 2ZM11 6V9H14V11H11V14H9V11H6V9H9V6H11Z" fill="#00234D"></path>
-</svg>
-</a>
-<a class="action-card action-wishlist" href="#">
-<svg class="icon icon-wishlist" fill="none" height="22" viewbox="0 0 26 22" width="26" xmlns="http://www.w3.org/2000/svg">
-<path d="M6.96429 0.000183105C3.12305 0.000183105 0 3.10686 0 6.84843C0 8.15388 0.602121 9.28455 1.16071 10.1014C1.71931 10.9181 2.29241 11.4425 2.29241 11.4425L12.3326 21.3439L13 22.0002L13.6674 21.3439L23.7076 11.4425C23.7076 11.4425 26 9.45576 26 6.84843C26 3.10686 22.877 0.000183105 19.0357 0.000183105C15.8474 0.000183105 13.7944 1.88702 13 2.68241C12.2056 1.88702 10.1526 0.000183105 6.96429 0.000183105ZM6.96429 1.82638C9.73912 1.82638 12.3036 4.48008 12.3036 4.48008L13 5.25051L13.6964 4.48008C13.6964 4.48008 16.2609 1.82638 19.0357 1.82638C21.8613 1.82638 24.1429 4.10557 24.1429 6.84843C24.1429 8.25732 22.4018 10.1584 22.4018 10.1584L13 19.4036L3.59821 10.1584C3.59821 10.1584 3.14844 9.73397 2.69866 9.07411C2.24888 8.41426 1.85714 7.55466 1.85714 6.84843C1.85714 4.10557 4.13867 1.82638 6.96429 1.82638Z" fill="#00234D"></path>
-</svg>
-</a>
-<a class="action-card action-addtocart" href="#">
-<svg class="icon icon-cart" fill="none" height="26" viewbox="0 0 24 26" width="24" xmlns="http://www.w3.org/2000/svg">
-<path d="M12 0.000183105C9.25391 0.000183105 7 2.25409 7 5.00018V6.00018H2.0625L2 6.93768L1 24.9377L0.9375 26.0002H23.0625L23 24.9377L22 6.93768L21.9375 6.00018H17V5.00018C17 2.25409 14.7461 0.000183105 12 0.000183105ZM12 2.00018C13.6562 2.00018 15 3.34393 15 5.00018V6.00018H9V5.00018C9 3.34393 10.3438 2.00018 12 2.00018ZM3.9375 8.00018H7V11.0002H9V8.00018H15V11.0002H17V8.00018H20.0625L20.9375 24.0002H3.0625L3.9375 8.00018Z" fill="#00234D"></path>
-</svg>
-</a>
-</div>
-</div>
-<div class="product-card-details">
-<ul class="color-lists list-unstyled d-flex align-items-center">
-<li><a class="color-swatch swatch-black active" href="javascript:void(0)"></a></li>
-<li><a class="color-swatch swatch-cyan" href="javascript:void(0)"></a></li>
-<li><a class="color-swatch swatch-purple" href="javascript:void(0)"></a>
-</li>
-</ul>
-<h3 class="product-card-title">
-<a href="product-details.html">Vita Lounge Chair</a>
-</h3>
-<div class="product-card-price">
-<span class="card-price-regular">$1529</span>
-<span class="card-price-compare text-decoration-line-through">$1759</span>
-</div>
-</div>
-</div>
-</div>
-<div class="col-lg-3 col-md-6 col-6" data-aos="fade-up" data-aos-duration="700">
-<div class="product-card">
-<div class="product-card-img">
-<a class="hover-switch" href="product-details.html">
-<img alt="product-img" class="secondary-img" src="assets/img/products/furniture/21.jpg"/>
-<img alt="product-img" class="primary-img" src="assets/img/products/furniture/27.jpg"/>
-</a>
-<div class="product-card-action product-card-action-2 justify-content-center">
-<svg fill="none" height="26" viewbox="0 0 26 26" width="26" xmlns="http://www.w3.org/2000/svg">
-<path d="M10 0C15.5117 0 20 4.48828 20 10C20 12.3945 19.1602 14.5898 17.75 16.3125L25.7188 24.2812L24.2812 25.7188L16.3125 17.75C14.5898 19.1602 12.3945 20 10 20C4.48828 20 0 15.5117 0 10C0 4.48828 4.48828 0 10 0ZM10 2C5.57031 2 2 5.57031 2 10C2 14.4297 5.57031 18 10 18C14.4297 18 18 14.4297 18 10C18 5.57031 14.4297 2 10 2ZM11 6V9H14V11H11V14H9V11H6V9H9V6H11Z" fill="#00234D"></path>
-</svg>
-</a>
-<a class="action-card action-wishlist" href="#">
-<svg class="icon icon-wishlist" fill="none" height="22" viewbox="0 0 26 22" width="26" xmlns="http://www.w3.org/2000/svg">
-<path d="M6.96429 0.000183105C3.12305 0.000183105 0 3.10686 0 6.84843C0 8.15388 0.602121 9.28455 1.16071 10.1014C1.71931 10.9181 2.29241 11.4425 2.29241 11.4425L12.3326 21.3439L13 22.0002L13.6674 21.3439L23.7076 11.4425C23.7076 11.4425 26 9.45576 26 6.84843C26 3.10686 22.877 0.000183105 19.0357 0.000183105C15.8474 0.000183105 13.7944 1.88702 13 2.68241C12.2056 1.88702 10.1526 0.000183105 6.96429 0.000183105ZM6.96429 1.82638C9.73912 1.82638 12.3036 4.48008 12.3036 4.48008L13 5.25051L13.6964 4.48008C13.6964 4.48008 16.2609 1.82638 19.0357 1.82638C21.8613 1.82638 24.1429 4.10557 24.1429 6.84843C24.1429 8.25732 22.4018 10.1584 22.4018 10.1584L13 19.4036L3.59821 10.1584C3.59821 10.1584 3.14844 9.73397 2.69866 9.07411C2.24888 8.41426 1.85714 7.55466 1.85714 6.84843C1.85714 4.10557 4.13867 1.82638 6.96429 1.82638Z" fill="#00234D"></path>
-</svg>
-</a>
-<a class="action-card action-addtocart" href="#">
-<svg class="icon icon-cart" fill="none" height="26" viewbox="0 0 24 26" width="24" xmlns="http://www.w3.org/2000/svg">
-<path d="M12 0.000183105C9.25391 0.000183105 7 2.25409 7 5.00018V6.00018H2.0625L2 6.93768L1 24.9377L0.9375 26.0002H23.0625L23 24.9377L22 6.93768L21.9375 6.00018H17V5.00018C17 2.25409 14.7461 0.000183105 12 0.000183105ZM12 2.00018C13.6562 2.00018 15 3.34393 15 5.00018V6.00018H9V5.00018C9 3.34393 10.3438 2.00018 12 2.00018ZM3.9375 8.00018H7V11.0002H9V8.00018H15V11.0002H17V8.00018H20.0625L20.9375 24.0002H3.0625L3.9375 8.00018Z" fill="#00234D"></path>
-</svg>
-</a>
-</div>
-</div>
-<div class="product-card-details">
-<ul class="color-lists list-unstyled d-flex align-items-center">
-<li><a class="color-swatch swatch-black active" href="javascript:void(0)"></a></li>
-<li><a class="color-swatch swatch-cyan" href="javascript:void(0)"></a></li>
-<li><a class="color-swatch swatch-purple" href="javascript:void(0)"></a>
-</li>
-</ul>
-<h3 class="product-card-title">
-<a href="product-details.html">Sarno Dining Chair</a>
-</h3>
-<div class="product-card-price">
-<span class="card-price-regular">$1529</span>
-<span class="card-price-compare text-decoration-line-through">$1759</span>
-</div>
-</div>
-</div>
-</div>
-<div class="col-lg-3 col-md-6 col-6" data-aos="fade-up" data-aos-duration="700">
-<div class="product-card">
-<div class="product-card-img">
-<a class="hover-switch" href="product-details.html">
-<img alt="product-img" class="secondary-img" src="assets/img/products/furniture/22.jpg"/>
-<img alt="product-img" class="primary-img" src="assets/img/products/furniture/28.jpg"/>
-</a>
-<div class="product-card-action product-card-action-2 justify-content-center">
-<svg fill="none" height="26" viewbox="0 0 26 26" width="26" xmlns="http://www.w3.org/2000/svg">
-<path d="M10 0C15.5117 0 20 4.48828 20 10C20 12.3945 19.1602 14.5898 17.75 16.3125L25.7188 24.2812L24.2812 25.7188L16.3125 17.75C14.5898 19.1602 12.3945 20 10 20C4.48828 20 0 15.5117 0 10C0 4.48828 4.48828 0 10 0ZM10 2C5.57031 2 2 5.57031 2 10C2 14.4297 5.57031 18 10 18C14.4297 18 18 14.4297 18 10C18 5.57031 14.4297 2 10 2ZM11 6V9H14V11H11V14H9V11H6V9H9V6H11Z" fill="#00234D"></path>
-</svg>
-</a>
-<a class="action-card action-wishlist" href="#">
-<svg class="icon icon-wishlist" fill="none" height="22" viewbox="0 0 26 22" width="26" xmlns="http://www.w3.org/2000/svg">
-<path d="M6.96429 0.000183105C3.12305 0.000183105 0 3.10686 0 6.84843C0 8.15388 0.602121 9.28455 1.16071 10.1014C1.71931 10.9181 2.29241 11.4425 2.29241 11.4425L12.3326 21.3439L13 22.0002L13.6674 21.3439L23.7076 11.4425C23.7076 11.4425 26 9.45576 26 6.84843C26 3.10686 22.877 0.000183105 19.0357 0.000183105C15.8474 0.000183105 13.7944 1.88702 13 2.68241C12.2056 1.88702 10.1526 0.000183105 6.96429 0.000183105ZM6.96429 1.82638C9.73912 1.82638 12.3036 4.48008 12.3036 4.48008L13 5.25051L13.6964 4.48008C13.6964 4.48008 16.2609 1.82638 19.0357 1.82638C21.8613 1.82638 24.1429 4.10557 24.1429 6.84843C24.1429 8.25732 22.4018 10.1584 22.4018 10.1584L13 19.4036L3.59821 10.1584C3.59821 10.1584 3.14844 9.73397 2.69866 9.07411C2.24888 8.41426 1.85714 7.55466 1.85714 6.84843C1.85714 4.10557 4.13867 1.82638 6.96429 1.82638Z" fill="#00234D"></path>
-</svg>
-</a>
-<a class="action-card action-addtocart" href="#">
-<svg class="icon icon-cart" fill="none" height="26" viewbox="0 0 24 26" width="24" xmlns="http://www.w3.org/2000/svg">
-<path d="M12 0.000183105C9.25391 0.000183105 7 2.25409 7 5.00018V6.00018H2.0625L2 6.93768L1 24.9377L0.9375 26.0002H23.0625L23 24.9377L22 6.93768L21.9375 6.00018H17V5.00018C17 2.25409 14.7461 0.000183105 12 0.000183105ZM12 2.00018C13.6562 2.00018 15 3.34393 15 5.00018V6.00018H9V5.00018C9 3.34393 10.3438 2.00018 12 2.00018ZM3.9375 8.00018H7V11.0002H9V8.00018H15V11.0002H17V8.00018H20.0625L20.9375 24.0002H3.0625L3.9375 8.00018Z" fill="#00234D"></path>
-</svg>
-</a>
-</div>
-</div>
-<div class="product-card-details">
-<ul class="color-lists list-unstyled d-flex align-items-center">
-<li><a class="color-swatch swatch-black active" href="javascript:void(0)"></a></li>
-<li><a class="color-swatch swatch-cyan" href="javascript:void(0)"></a></li>
-<li><a class="color-swatch swatch-purple" href="javascript:void(0)"></a>
-</li>
-</ul>
-<h3 class="product-card-title">
-<a href="product-details.html">Vita Lounge Chair</a>
-</h3>
-<div class="product-card-price">
-<span class="card-price-regular">$1529</span>
-<span class="card-price-compare text-decoration-line-through">$1759</span>
-</div>
-</div>
-</div>
-</div>
-<div class="col-lg-3 col-md-6 col-6" data-aos="fade-up" data-aos-duration="700">
-<div class="product-card">
-<div class="product-card-img">
-<a class="hover-switch" href="product-details.html">
-<img alt="product-img" class="secondary-img" src="assets/img/products/furniture/29.jpg"/>
-<img alt="product-img" class="primary-img" src="assets/img/products/furniture/23.jpg"/>
-</a>
-<div class="product-card-action product-card-action-2 justify-content-center">
-<svg fill="none" height="26" viewbox="0 0 26 26" width="26" xmlns="http://www.w3.org/2000/svg">
-<path d="M10 0C15.5117 0 20 4.48828 20 10C20 12.3945 19.1602 14.5898 17.75 16.3125L25.7188 24.2812L24.2812 25.7188L16.3125 17.75C14.5898 19.1602 12.3945 20 10 20C4.48828 20 0 15.5117 0 10C0 4.48828 4.48828 0 10 0ZM10 2C5.57031 2 2 5.57031 2 10C2 14.4297 5.57031 18 10 18C14.4297 18 18 14.4297 18 10C18 5.57031 14.4297 2 10 2ZM11 6V9H14V11H11V14H9V11H6V9H9V6H11Z" fill="#00234D"></path>
-</svg>
-</a>
-<a class="action-card action-wishlist" href="#">
-<svg class="icon icon-wishlist" fill="none" height="22" viewbox="0 0 26 22" width="26" xmlns="http://www.w3.org/2000/svg">
-<path d="M6.96429 0.000183105C3.12305 0.000183105 0 3.10686 0 6.84843C0 8.15388 0.602121 9.28455 1.16071 10.1014C1.71931 10.9181 2.29241 11.4425 2.29241 11.4425L12.3326 21.3439L13 22.0002L13.6674 21.3439L23.7076 11.4425C23.7076 11.4425 26 9.45576 26 6.84843C26 3.10686 22.877 0.000183105 19.0357 0.000183105C15.8474 0.000183105 13.7944 1.88702 13 2.68241C12.2056 1.88702 10.1526 0.000183105 6.96429 0.000183105ZM6.96429 1.82638C9.73912 1.82638 12.3036 4.48008 12.3036 4.48008L13 5.25051L13.6964 4.48008C13.6964 4.48008 16.2609 1.82638 19.0357 1.82638C21.8613 1.82638 24.1429 4.10557 24.1429 6.84843C24.1429 8.25732 22.4018 10.1584 22.4018 10.1584L13 19.4036L3.59821 10.1584C3.59821 10.1584 3.14844 9.73397 2.69866 9.07411C2.24888 8.41426 1.85714 7.55466 1.85714 6.84843C1.85714 4.10557 4.13867 1.82638 6.96429 1.82638Z" fill="#00234D"></path>
-</svg>
-</a>
-<a class="action-card action-addtocart" href="#">
-<svg class="icon icon-cart" fill="none" height="26" viewbox="0 0 24 26" width="24" xmlns="http://www.w3.org/2000/svg">
-<path d="M12 0.000183105C9.25391 0.000183105 7 2.25409 7 5.00018V6.00018H2.0625L2 6.93768L1 24.9377L0.9375 26.0002H23.0625L23 24.9377L22 6.93768L21.9375 6.00018H17V5.00018C17 2.25409 14.7461 0.000183105 12 0.000183105ZM12 2.00018C13.6562 2.00018 15 3.34393 15 5.00018V6.00018H9V5.00018C9 3.34393 10.3438 2.00018 12 2.00018ZM3.9375 8.00018H7V11.0002H9V8.00018H15V11.0002H17V8.00018H20.0625L20.9375 24.0002H3.0625L3.9375 8.00018Z" fill="#00234D"></path>
-</svg>
-</a>
-</div>
-</div>
-<div class="product-card-details">
-<ul class="color-lists list-unstyled d-flex align-items-center">
-<li><a class="color-swatch swatch-black active" href="javascript:void(0)"></a></li>
-<li><a class="color-swatch swatch-cyan" href="javascript:void(0)"></a></li>
-<li><a class="color-swatch swatch-purple" href="javascript:void(0)"></a>
-</li>
-</ul>
-<h3 class="product-card-title">
-<a href="product-details.html">Vita Lounge Chair</a>
-</h3>
-<div class="product-card-price">
-<span class="card-price-regular">$1529</span>
-<span class="card-price-compare text-decoration-line-through">$1759</span>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="pagination justify-content-center mt-100">
-<nav>
-<ul class="pagination m-0 d-flex align-items-center">
-<li class="item disabled">
-<a class="link">
-<svg class="icon icon-left" fill="none" height="100" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="100" xmlns="http://www.w3.org/2000/svg">
-<polyline points="15 18 9 12 15 6"></polyline>
-</svg>
-</a>
-</li>
-<li class="item"><a class="link" href="#">1</a></li>
-<li class="item active"><a class="link" href="#">2</a></li>
-<li class="item"><a class="link" href="#">3</a></li>
-<li class="item"><a class="link" href="#">4</a></li>
-<li class="item">
-<a class="link" href="#">
-<svg class="icon icon-right" fill="none" height="100" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="100" xmlns="http://www.w3.org/2000/svg">
-<polyline points="9 18 15 12 9 6"></polyline>
-</svg>
-</a>
-</li>
-</ul>
-</nav>
-</div>
-</div>
-<!-- product area end -->
-<!-- sidebar start -->
-<div class="col-lg-3 col-md-12 col-12">
-<div class="collection-filter filter-drawer">
-<div class="filter-widget d-lg-none d-flex align-items-center justify-content-between">
-<h5 class="heading_24">Sorting By
-                                    <button class="btn-close text-reset filter-drawer-trigger d-lg-none" type="button"></button>
-</h5></div>
-<div class="filter-widget d-lg-none">
-<div class="filter-header faq-heading heading_18 d-flex align-items-center justify-content-between border-bottom" data-bs-target="#filter-mobile-sort" data-bs-toggle="collapse">
-<span>
-<span class="sorting-title me-2">Sort by:</span>
-<span class="active-sorting">Featured</span>
-</span>
-<span class="faq-heading-icon">
-<svg class="icon icon-down" fill="none" height="24" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
-<polyline points="6 9 12 15 18 9"></polyline>
-</svg>
-</span>
-</div>
-<div class="accordion-collapse collapse show" id="filter-mobile-sort">
-<ul class="sorting-lists-mobile list-unstyled m-0">
-<li><a class="text_14" href="#">Featured</a></li>
-<li><a class="text_14" href="#">Best Selling</a></li>
-<li><a class="text_14" href="#">Alphabetically, A-Z</a></li>
-<li><a class="text_14" href="#">Alphabetically, Z-A</a></li>
-<li><a class="text_14" href="#">Price, low to high</a></li>
-<li><a class="text_14" href="#">Price, high to low</a></li>
-<li><a class="text_14" href="#">Date, old to new</a></li>
-<li><a class="text_14" href="#">Date, new to old</a></li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-<!-- sidebar end -->
-</div>
-</div>
-</div>
-</main>
-<!-- footer start -->
-<div id="site-footer"></div>
-<!-- footer end -->
-<!-- scrollup start -->
-<button id="scrollup">
-<svg fill="none" height="24" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><polyline points="18 15 12 9 6 15"></polyline></svg>
-</button>
-<!-- scrollup end -->
-<!-- drawer menu start -->
-<!-- drawer menu end -->
-<!-- drawer cart start -->
-<!-- drawer cart end -->
-<!-- product quickview start -->
-<!-- product quickview end -->
-<!-- all js -->
-<div id="site-overlays"></div></div>
-<script src="assets/js/app.js"></script></body>
+<script src="assets/js/app.js"></script>
+<script src="assets/js/products.js"></script>
+</body>
 </html>

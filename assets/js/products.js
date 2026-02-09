@@ -8,34 +8,37 @@
   const categoryWrap = document.getElementById("category-filter");
   const paginationEl = document.getElementById("pagination");
 
+  // Mobile sort support
+  const mobileSortList = document.getElementById("mobile-sort-list");
+  const mobileActiveSorting = document.getElementById("mobile-active-sorting");
+
   const base = window.__SITE_BASE || "/";
-  const jsonUrl = `${base}/products.json`;
+  const jsonUrl = `${base}data/products.json`;
 
   const PAGE_SIZE = 12;
 
   let ALL = [];
-  let state = {
-    q: "",
-    sort: "featured",
-    category: "All",
-    page: 1
-  };
+  let state = { q: "", sort: "featured", category: "All", page: 1 };
 
   const escapeHtml = (str = "") =>
     str.replace(/[&<>"']/g, (m) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[m]));
 
   const toDateNum = (d) => {
-    // "YYYY-MM-DD" -> number for sorting
     const x = (d || "").replaceAll("-", "");
     const n = parseInt(x, 10);
     return Number.isFinite(n) ? n : 0;
   };
 
-  const fmtPrice = (n) => {
-    if (!n || n <= 0) return "";
-    // Simple ₹ format without Intl (safe for GH Pages)
-    return "₹" + String(n);
-  };
+  const fmtPrice = (n) => (!n || n <= 0 ? "" : "₹" + String(n));
+
+  const sortLabel = (key) => ({
+    featured: "Featured",
+    newest: "Newest",
+    price_asc: "Price: low to high",
+    price_desc: "Price: high to low",
+    az: "Alphabetically, A-Z",
+    za: "Alphabetically, Z-A"
+  }[key] || "Featured");
 
   const cardHtml = (p) => {
     const title = escapeHtml(p.title || "");
@@ -91,7 +94,7 @@
     const cats = getCategories(ALL);
 
     categoryWrap.innerHTML = cats.map(c => {
-      const active = (state.category === c) ? "active" : "";
+      const active = (state.category === c);
       return `
         <button type="button"
           class="btn btn-sm ${active ? "btn-dark" : "btn-outline-dark"} text-start"
@@ -105,7 +108,7 @@
       btn.addEventListener("click", () => {
         state.category = btn.getAttribute("data-cat") || "All";
         state.page = 1;
-        syncUI();
+        renderCategories();
         render();
       });
     });
@@ -114,12 +117,10 @@
   function applyFilters(items) {
     let out = items.slice();
 
-    // category
     if (state.category && state.category !== "All") {
       out = out.filter(p => (p.category || "Other") === state.category);
     }
 
-    // search
     const q = (state.q || "").trim().toLowerCase();
     if (q) {
       out = out.filter(p => {
@@ -152,8 +153,7 @@
         break;
       case "featured":
       default:
-        // Keep JSON order (featured)
-        break;
+        break; // JSON order
     }
     return out;
   }
@@ -183,7 +183,6 @@
     let html = "";
     html += pageBtn("‹", p - 1, p === 1);
 
-    // show max 5 numbers around current
     const start = Math.max(1, p - 2);
     const end = Math.min(totalPages, start + 4);
 
@@ -208,17 +207,27 @@
     });
   }
 
-  function syncUI() {
-    if (searchInput) searchInput.value = state.q;
-    if (sortSelect) sortSelect.value = state.sort;
-  }
-
   function setResultsCount(total, totalPages) {
     if (!resultsCountEl) return;
     resultsCountEl.textContent = `${total} items • Page ${state.page} of ${totalPages}`;
   }
 
+  function syncSortUI() {
+    if (sortSelect) sortSelect.value = state.sort;
+    if (mobileActiveSorting) mobileActiveSorting.textContent = sortLabel(state.sort);
+
+    // highlight active item in mobile list (optional)
+    if (mobileSortList) {
+      mobileSortList.querySelectorAll("a[data-sort]").forEach(a => {
+        const isActive = (a.getAttribute("data-sort") === state.sort);
+        a.style.fontWeight = isActive ? "600" : "";
+      });
+    }
+  }
+
   function render() {
+    syncSortUI();
+
     const filtered = applyFilters(ALL);
     const sorted = applySort(filtered);
     const { total, totalPages, pageItems } = paginate(sorted);
@@ -243,7 +252,6 @@
       ALL = Array.isArray(data) ? data : [];
 
       renderCategories();
-      syncUI();
       render();
 
       // search
@@ -259,7 +267,7 @@
         });
       }
 
-      // sort
+      // desktop sort
       if (sortSelect) {
         sortSelect.addEventListener("change", () => {
           state.sort = sortSelect.value || "featured";
@@ -267,6 +275,19 @@
           render();
         });
       }
+
+      // mobile sort list
+      if (mobileSortList) {
+        mobileSortList.querySelectorAll("a[data-sort]").forEach(a => {
+          a.addEventListener("click", (e) => {
+            e.preventDefault();
+            state.sort = a.getAttribute("data-sort") || "featured";
+            state.page = 1;
+            render();
+          });
+        });
+      }
+
     } catch (err) {
       console.error(err);
       grid.innerHTML = `<div class="col-12"><p class="mb-0">Products failed to load.</p></div>`;
