@@ -2,8 +2,8 @@
 <html class="no-js" lang="en">
 <head>
   <title>Shop | AEROGEAR</title>
-  <meta charset="utf-8"/>
 
+  <meta charset="utf-8" />
   <script>
   (function(){
     var base = '/';
@@ -23,21 +23,23 @@
   })();
   </script>
 
-  <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
-  <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport"/>
-  <meta content="meta description" name="description"/>
-  <link href="assets/img/favicon.png" rel="shortcut icon" type="image/x-icon"/>
+  <meta content="IE=edge" http-equiv="X-UA-Compatible" />
+  <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport" />
+  <meta content="meta description" name="description" />
 
-  <link href="https://fonts.googleapis.com" rel="preconnect"/>
-  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+  <link href="assets/img/favicon.png" rel="shortcut icon" type="image/x-icon" />
 
-  <link href="assets/css/main.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com" rel="preconnect" />
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link href="assets/css/main.css" rel="stylesheet" />
 </head>
 
 <body data-page="shop">
 <div class="body-wrapper">
 
+  <!-- header -->
   <div id="site-header"></div>
 
   <!-- breadcrumb -->
@@ -61,9 +63,7 @@
     <div class="collection mt-100">
       <div class="container">
         <div class="row">
-
-          <!-- LEFT: products -->
-          <div class="col-lg-9 col-md-12 col-12">
+          <div class="col-12">
 
             <!-- top bar -->
             <div class="filter-sort-wrapper d-flex justify-content-between align-items-center flex-wrap gap-3 mb-4">
@@ -73,9 +73,6 @@
               </div>
 
               <div class="d-flex align-items-center gap-2 flex-wrap">
-                <input id="search-input" class="form-control" style="max-width:260px"
-                       type="search" placeholder="Search products..." />
-
                 <select id="sort-select" class="form-select" style="max-width:220px">
                   <option value="featured">Featured</option>
                   <option value="newest">Newest</option>
@@ -84,15 +81,10 @@
                   <option value="az">Alphabetically, A-Z</option>
                   <option value="za">Alphabetically, Z-A</option>
                 </select>
-
-                <!-- mobile filter open button (optional) -->
-                <button class="btn btn-dark d-lg-none filter-drawer-trigger" type="button">
-                  Filters
-                </button>
               </div>
             </div>
 
-            <!-- grid -->
+            <!-- product grid -->
             <div class="collection-product-container">
               <div class="row" id="products-grid"></div>
             </div>
@@ -105,64 +97,18 @@
             </div>
 
           </div>
-
-          <!-- RIGHT: sidebar -->
-          <div class="col-lg-3 col-md-12 col-12">
-            <div class="collection-filter filter-drawer">
-
-              <!-- mobile close header -->
-              <div class="filter-widget d-lg-none d-flex align-items-center justify-content-between">
-                <h5 class="heading_24 mb-0">
-                  Filters
-                  <button class="btn-close text-reset filter-drawer-trigger d-lg-none" type="button"></button>
-                </h5>
-              </div>
-
-              <!-- mobile sort list (kept, but now works via JS) -->
-              <div class="filter-widget d-lg-none">
-                <div class="filter-header faq-heading heading_18 d-flex align-items-center justify-content-between border-bottom"
-                     data-bs-target="#filter-mobile-sort" data-bs-toggle="collapse">
-                  <span>
-                    <span class="sorting-title me-2">Sort by:</span>
-                    <span class="active-sorting" id="mobile-active-sorting">Featured</span>
-                  </span>
-                  <span class="faq-heading-icon">
-                    <svg class="icon icon-down" fill="none" height="24" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
-                      <polyline points="6 9 12 15 18 9"></polyline>
-                    </svg>
-                  </span>
-                </div>
-
-                <div class="accordion-collapse collapse show" id="filter-mobile-sort">
-                  <ul class="sorting-lists-mobile list-unstyled m-0" id="mobile-sort-list">
-                    <li><a class="text_14" href="#" data-sort="featured">Featured</a></li>
-                    <li><a class="text_14" href="#" data-sort="az">Alphabetically, A-Z</a></li>
-                    <li><a class="text_14" href="#" data-sort="za">Alphabetically, Z-A</a></li>
-                    <li><a class="text_14" href="#" data-sort="price_asc">Price, low to high</a></li>
-                    <li><a class="text_14" href="#" data-sort="price_desc">Price, high to low</a></li>
-                    <li><a class="text_14" href="#" data-sort="newest">Date, new to old</a></li>
-                  </ul>
-                </div>
-              </div>
-
-              <!-- categories -->
-              <div class="filter-widget mt-4">
-                <h5 class="heading_18 mb-3">Categories</h5>
-                <div id="category-filter" class="d-flex flex-column gap-2"></div>
-              </div>
-
-            </div>
-          </div>
-
         </div>
       </div>
     </div>
   </main>
 
+  <!-- footer -->
   <div id="site-footer"></div>
 
+  <!-- scrollup -->
   <button id="scrollup">
-    <svg fill="none" height="24" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+    <svg fill="none" height="24" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+         viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
       <polyline points="18 15 12 9 6 15"></polyline>
     </svg>
   </button>
