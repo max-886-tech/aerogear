@@ -17,49 +17,81 @@
     }[m]));
   }
 
-  function sectionSlideshow(cfg) {
-    const slides = (cfg.slides || []).map(s => `
-      <div class="slide-item position-relative">
-        <picture>
-          <source media="(max-width: 767px)" srcset="${esc(s.imgMobile)}">
-          <img class="w-100" src="${esc(s.imgDesktop)}" alt="${esc(s.title)}">
-        </picture>
+ function sectionSlideshow(cfg) {
+  const id = "heroCarousel";
 
-        <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center">
-          <div class="container">
-            <div class="text-${s.align === "start" ? "start" : "end"}">
-              <p class="mb-2 text-white-50">${esc(s.tag || "")}</p>
-              <h2 class="text-white fw-bold">${esc(s.title || "")}</h2>
-              <a class="btn btn-light mt-3" href="${esc(s.ctaHref || "#")}">${esc(s.ctaText || "Shop")}</a>
+  const slides = (cfg.slides || []).map((s, i) => {
+    const align = (s.align === "start") ? "text-start" : "text-end";
+    const tag = s.tag ? `<p class="mb-2 text-white-50">${esc(s.tag)}</p>` : "";
+    const title = s.title ? `<h1 class="text-white fw-bold mb-0">${esc(s.title)}</h1>` : "";
+    const cta = (s.ctaText && s.ctaHref)
+      ? `<a class="btn btn-light mt-3 fw-semibold" href="${esc(s.ctaHref)}">${esc(s.ctaText)}</a>`
+      : "";
+
+    const desktop = esc(s.imgDesktop || "");
+    const mobile = esc(s.imgMobile || s.imgDesktop || "");
+
+    return `
+      <div class="carousel-item ${i === 0 ? "active" : ""}">
+        <div class="position-relative">
+          <picture>
+            <source media="(max-width: 767px)" srcset="${mobile}">
+            <img src="${desktop}" class="d-block w-100" alt="${esc(s.title || "Slide")}">
+          </picture>
+
+          <!-- overlay -->
+          <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center">
+            <div class="container">
+              <div class="${align}">
+                ${tag}
+                ${title}
+                ${cta}
+              </div>
             </div>
           </div>
         </div>
       </div>
-    `).join("");
-
-    return `
-      <section class="position-relative">
-        <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
-          <div class="carousel-inner">
-            ${ (cfg.slides || []).map((_, i) => `
-              <div class="carousel-item ${i === 0 ? "active" : ""}">
-                ${slides.split('</div></div></div></div>')[i] || ""}
-              </div>
-            `).join("")}
-          </div>
-
-          <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-          </button>
-          <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-          </button>
-        </div>
-      </section>
     `;
-  }
+  }).join("");
+
+  const indicators = (cfg.slides || []).map((_, i) => `
+    <button type="button"
+      data-bs-target="#${id}"
+      data-bs-slide-to="${i}"
+      class="${i === 0 ? "active" : ""}"
+      aria-current="${i === 0 ? "true" : "false"}"
+      aria-label="Slide ${i + 1}">
+    </button>
+  `).join("");
+
+  // Auto-scroll timing (ms). Use cfg.interval if you want from JSON
+  const interval = Number(cfg.interval || 3500);
+
+  return `
+    <section class="position-relative">
+      <div id="${id}" class="carousel slide" data-bs-ride="carousel" data-bs-interval="${interval}">
+        <div class="carousel-indicators">
+          ${indicators}
+        </div>
+
+        <div class="carousel-inner">
+          ${slides}
+        </div>
+
+        <button class="carousel-control-prev" type="button" data-bs-target="#${id}" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+
+        <button class="carousel-control-next" type="button" data-bs-target="#${id}" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </section>
+  `;
+}
+
 
   function sectionBanner(cfg) {
     const items = (cfg.items || []).slice(0, 2);
