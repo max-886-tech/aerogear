@@ -41,13 +41,13 @@
       "enabled": true,
       "items": [
         {
-          "img": "assets/img/banner/bag-1.jpg",
+          "img": "assets/img/slideshow/b1.webp",
           "titleSmall": "Mini Backpack",
           "title": "25% off on <br>all bags",
           "href": "shop.html"
         },
         {
-          "img": "assets/img/banner/bag-2.jpg",
+          "img": "assets/img/slideshow/b2.webp",
           "titleSmall": "New Year Sell",
           "title": "25% off <br>for women",
           "href": "shop.html"
@@ -68,9 +68,9 @@
       "enabled": true,
       "heading": "Shop By Category",
       "items": [
-        { "img": "assets/img/banner/bag-3.jpg", "tag": "New Arrivals", "title": "Women Beautiful Handbag", "href": "shop.html" },
-        { "img": "assets/img/banner/bag-4.jpg", "tag": "New Arrivals", "title": "Bag Bouquet", "href": "shop.html" },
-        { "img": "assets/img/banner/bag-5.jpg", "tag": "Quality Product", "title": "Leather collection", "href": "shop.html" }
+        { "img": "assets/img/shop/3.jpg", "tag": "New Arrivals", "title": "Women Beautiful Handbag", "href": "shop.html" },
+        { "img": "assets/img/shop/4.jpg", "tag": "New Arrivals", "title": "Bag Bouquet", "href": "shop.html" },
+        { "img": "assets/img/shop/5.jpg", "tag": "Quality Product", "title": "Leather collection", "href": "shop.html" }
       ]
     },
 
@@ -80,10 +80,10 @@
       "heading": "Bag & Water pot",
       "subheading": "See how our customers styled shoe products in their foot",
       "images": [
-        "assets/img/instagram/bag1.jpg",
-        "assets/img/instagram/bag2.jpg",
-        "assets/img/instagram/bag3.jpg",
-        "assets/img/instagram/bag4.jpg"
+        "assets/img/shop/3.jpg",
+        "assets/img/shop/4.jpg",
+        "assets/img/shop/5.jpg",
+        "assets/img/shop/6.jpg"
       ]
     },
 
