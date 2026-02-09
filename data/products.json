@@ -1,34 +1,106 @@
 [
   {
-    "id": "B0DY59DQK4",
-    "title": "Smart Laptop Backpack 16 Inch | Waterproof Travel & Office Bag for Men & Women with Anti-Theft Design",
-    "price": 999,
-    "compareAt": 1799,
-    "createdAt": "2026-02-01",
+    "id": "B0F4NH81HP",
+    "title": "AEROGEAR Waterproof Anti-Theft Backpack (Amazon ASIN: B0F4NH81HP)",
+    "price": 0,
+    "compareAt": 0,
+    "createdAt": "",
     "links": {
-      "amazon": "https://www.amazon.in/AEROGEAR-Waterproof-Anti-Theft-Backpack-Corporate/dp/B0DY59DQK4",
+      "amazon": "https://www.amazon.in/AEROGEAR-Waterproof-Anti-Theft-Backpack-Corporate/dp/B0F4NH81HP?th=1",
       "flipkart": ""
     },
-    "images": {
-      "primary": "assets/img/shop/2.jpg",
-      "secondary": "assets/img/shop/1.jpg"
+    "images": { "primary": "", "secondary": "" },
+    "badge": { "text": "", "class": "" }
+  },
+  {
+    "id": "B0F45442HM",
+    "title": "AEROGEAR Laptop Backpack for Men & Women 16 Inch | Lightweight Multipurpose Backpack",
+    "price": 0,
+    "compareAt": 0,
+    "createdAt": "",
+    "links": {
+      "amazon": "https://www.amazon.in/AEROGEAR-Backpack-Lightweight-Backpacks-Multipurpose/dp/B0F45442HM",
+      "flipkart": ""
     },
-    "badge": { "text": "-44%", "class": "badge-percentage" }
+    "images": { "primary": "", "secondary": "" },
+    "badge": { "text": "", "class": "" }
+  },
+  {
+    "id": "B0GFN7GK9X",
+    "title": "AEROGEAR Premium Laptop Backpack for Men & Women | Water-Resistant Office & College Bag | Fits Up to 16 Inch Laptops | Spacious with Smart Organizer & Bottle Holder",
+    "price": 0,
+    "compareAt": 0,
+    "createdAt": "",
+    "links": {
+      "amazon": "https://www.amazon.in/AEROGEAR-Backpack-Water-Resistant-Spacious-Organizer/dp/B0GFN7GK9X",
+      "flipkart": ""
+    },
+    "images": { "primary": "", "secondary": "" },
+    "badge": { "text": "", "class": "" }
+  },
+  {
+    "id": "B0FMS3RZSP",
+    "title": "AEROGEAR Multi-Compartment Backpack Bag for Men & Women (Laptop Sleeve up to 15.6 inch) | Travel Ready Office Bag",
+    "price": 0,
+    "compareAt": 0,
+    "createdAt": "",
+    "links": {
+      "amazon": "https://www.amazon.in/AEROGEAR-Multi-Compartment-Backpack-Bag-Women/dp/B0FMS3RZSP",
+      "flipkart": ""
+    },
+    "images": { "primary": "", "secondary": "" },
+    "badge": { "text": "", "class": "" }
+  },
+  {
+    "id": "B0FDR1NMTL",
+    "title": "AEROGEAR Genuine Leather Office Bag | Premium Napa Leather Laptop Bag (13.5 Inch) | Shoulder & Messenger Style",
+    "price": 3649,
+    "compareAt": 0,
+    "createdAt": "",
+    "links": {
+      "amazon": "https://www.amazon.in/AEROGEAR-Genuine-Executive-Shoulder-Messenger/dp/B0FDR1NMTL",
+      "flipkart": ""
+    },
+    "images": { "primary": "", "secondary": "" },
+    "badge": { "text": "", "class": "" }
+  },
+  {
+    "id": "B0F7GJ7F6S",
+    "title": "AEROGEAR Business Backpacks for Men & Women | Casual Laptop Backpack | Waterproof Smart Tech Bag for Office, College, Travel & Professionals",
+    "price": 0,
+    "compareAt": 0,
+    "createdAt": "",
+    "links": {
+      "amazon": "https://www.amazon.in/AEROGEAR-Business-Backpacks-Waterproof-Professionals/dp/B0F7GJ7F6S",
+      "flipkart": ""
+    },
+    "images": { "primary": "", "secondary": "" },
+    "badge": { "text": "", "class": "" }
+  },
+  {
+    "id": "B0G2GSXYCF",
+    "title": "AEROGEAR Vegan Leather Messenger Bag for Men & Women | Slim & Lightweight Laptop Bag | Cotton Canvas Office Bag with Adjustable Strap",
+    "price": 0,
+    "compareAt": 0,
+    "createdAt": "",
+    "links": {
+      "amazon": "https://www.amazon.in/AEROGEAR-Leather-Messenger-Lightweight-Adjustable/dp/B0G2GSXYCF",
+      "flipkart": ""
+    },
+    "images": { "primary": "", "secondary": "" },
+    "badge": { "text": "", "class": "" }
   },
   {
     "id": "B0DY59DQK4",
     "title": "Smart Laptop Backpack 16 Inch | Waterproof Travel & Office Bag for Men & Women with Anti-Theft Design",
-    "price": 999,
-    "compareAt": 1799,
-    "createdAt": "2026-02-01",
+    "price": 0,
+    "compareAt": 0,
+    "createdAt": "",
     "links": {
-      "amazon": "",
-      "flipkart": "https://www.amazon.in/AEROGEAR-Waterproof-Anti-Theft-Backpack-Corporate/dp/B0DY59DQK4"
+      "amazon": "https://www.amazon.in/AEROGEAR-Waterproof-Anti-Theft-Backpack-Corporate/dp/B0DY59DQK4?th=1",
+      "flipkart": ""
     },
-    "images": {
-      "primary": "assets/img/shop/2.jpg",
-      "secondary": "assets/img/shop/1.jpg"
-    },
-    "badge": { "text": "-44%", "class": "badge-percentage" }
+    "images": { "primary": "assets/img/shop/2.jpg", "secondary": "assets/img/shop/1.jpg" },
+    "badge": { "text": "", "class": "" }
   }
 ]
